@@ -60,20 +60,17 @@ export function IconCustomHome(props: IconProps): JSX.Element {
 export function IconRenovation(props: IconProps): JSX.Element {
   return (
     <IconWrapper {...props} label="Renovations">
-      {/* Wrench */}
-      <path d="M10 8 L6 12 L6 16 L10 20 L14 20 L18 16 L18 12 L14 8 Z" stroke="currentColor" strokeWidth="2" fill="none" />
-      <rect x="10" y="20" width="4" height="20" fill="currentColor" />
-      {/* Gear */}
-      <circle cx="34" cy="24" r="8" stroke="#72B725" strokeWidth="2" fill="none" shapeRendering="geometricPrecision" />
-      <circle cx="34" cy="24" r="3" stroke="#72B725" strokeWidth="2" fill="none" shapeRendering="geometricPrecision" />
-      <line x1="34" y1="14" x2="34" y2="18" stroke="#72B725" strokeWidth="2" />
-      <line x1="34" y1="30" x2="34" y2="34" stroke="#72B725" strokeWidth="2" />
-      <line x1="24" y1="24" x2="28" y2="24" stroke="#72B725" strokeWidth="2" />
-      <line x1="40" y1="24" x2="44" y2="24" stroke="#72B725" strokeWidth="2" />
-      <line x1="28" y1="18" x2="30" y2="20" stroke="#72B725" strokeWidth="2" />
-      <line x1="38" y1="28" x2="40" y2="30" stroke="#72B725" strokeWidth="2" />
-      <line x1="28" y1="30" x2="30" y2="28" stroke="#72B725" strokeWidth="2" />
-      <line x1="38" y1="20" x2="40" y2="18" stroke="#72B725" strokeWidth="2" />
+      {/* Hammer */}
+      <rect x="4" y="6" width="14" height="8" rx="1" fill="currentColor" />
+      <rect x="8" y="14" width="4" height="24" rx="1" fill="currentColor" />
+      {/* Saw */}
+      <rect x="26" y="4" width="14" height="6" rx="1" fill="#72B725" />
+      <line x1="32" y1="10" x2="32" y2="16" stroke="#72B725" strokeWidth="2" />
+      <rect x="28" y="16" width="12" height="26" rx="1" stroke="#72B725" strokeWidth="2" fill="none" />
+      {/* Saw teeth */}
+      <line x1="28" y1="22" x2="32" y2="22" stroke="#72B725" strokeWidth="2" />
+      <line x1="28" y1="28" x2="32" y2="28" stroke="#72B725" strokeWidth="2" />
+      <line x1="28" y1="34" x2="32" y2="34" stroke="#72B725" strokeWidth="2" />
     </IconWrapper>
   );
 }
