@@ -3,21 +3,53 @@
   background-color: var(--bg-dark);
   padding: var(--space-2xl) 0;
   overflow: hidden;
+  /* Subtle noise texture via repeating gradient */
+  background-image:
+    radial-gradient(circle at 20% 80%, rgba(0,0,0,0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(0,0,0,0.06) 0%, transparent 50%);
 }
 
-/* Radial lighten effect behind logo */
+/* Radial lighten effect behind logo — stronger per Paul */
 .radialBg {
   position: absolute;
-  top: 0;
+  top: -40px;
   left: 50%;
   transform: translateX(-50%);
-  width: 600px;
-  height: 400px;
+  width: 700px;
+  height: 500px;
   background: radial-gradient(
     ellipse at center,
-    rgba(255, 255, 255, 0.06) 0%,
+    rgba(255, 255, 255, 0.10) 0%,
+    rgba(255, 255, 255, 0.04) 40%,
     transparent 70%
   );
+  pointer-events: none;
+}
+
+/* Green accent lines extending from logo area — matches mockup V-shape */
+.accentLineLeft {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 40%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, var(--sogn-green) 100%);
+  opacity: 0.7;
+  transform: rotate(-2deg);
+  transform-origin: right center;
+  pointer-events: none;
+}
+
+.accentLineRight {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  width: 40%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent 0%, var(--sogn-green) 100%);
+  opacity: 0.7;
+  transform: rotate(2deg);
+  transform-origin: left center;
   pointer-events: none;
 }
 
@@ -40,6 +72,13 @@
 
 .logoWrap {
   margin-bottom: var(--space-sm);
+}
+
+.logoImg {
+  width: 240px;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 0 40px rgba(255, 255, 255, 0.15));
 }
 
 .title {
@@ -65,7 +104,7 @@
   max-width: 640px;
 }
 
-/* Form card */
+/* Form card — darker than section bg, matching mockup */
 .formCard {
   background-color: var(--bg-dark-card);
   border: 1px solid var(--border-dark);
@@ -109,7 +148,7 @@
 .textarea:focus {
   outline: none;
   border-color: var(--sogn-green);
-  box-shadow: 0 0 0 3px rgba(124, 179, 66, 0.2);
+  box-shadow: 0 0 0 3px rgba(114, 183, 37, 0.25);
 }
 
 .inputError {
@@ -134,7 +173,7 @@
   background-color: var(--sogn-green);
   color: var(--white);
   font-size: var(--text-body);
-  font-weight: var(--weight-semibold);
+  font-weight: var(--weight-bold);
   border: none;
   border-radius: var(--radius-btn);
   cursor: pointer;
@@ -142,7 +181,7 @@
   min-height: 44px;
   margin-top: var(--space-sm);
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
 }
 
 .submit:hover {
@@ -244,7 +283,18 @@
   }
 }
 
-/* Honeypot — invisible to real users, catches bots */
+@media (max-width: 640px) {
+  .logoImg {
+    width: 180px;
+  }
+
+  .accentLineLeft,
+  .accentLineRight {
+    display: none;
+  }
+}
+
+/* Honeypot */
 .honey {
   position: absolute;
   left: -9999px;
@@ -253,4 +303,12 @@
   height: 1px;
   overflow: hidden;
   opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .inner {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }

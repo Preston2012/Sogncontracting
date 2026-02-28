@@ -47,7 +47,7 @@ export function ContactForm(): JSX.Element {
       return;
     }
 
-    // Honeypot check — if filled, silently "succeed" (it's a bot)
+    // Honeypot check
     if (formData.get("website")?.toString().trim()) {
       setStatus("success");
       return;
@@ -73,10 +73,21 @@ export function ContactForm(): JSX.Element {
       {/* Radial lighten background effect */}
       <div className={styles.radialBg} aria-hidden="true" />
 
+      {/* Green accent lines extending from logo area */}
+      <div className={styles.accentLineLeft} aria-hidden="true" />
+      <div className={styles.accentLineRight} aria-hidden="true" />
+
       <div className={`container ${styles.inner} ${visible ? styles.visible : ""}`}>
-        {/* Logo above form */}
+        {/* Real logo image */}
         <div className={styles.logoWrap} aria-hidden="true">
-          <ContactLogo />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/logo-full.png"
+            alt=""
+            className={styles.logoImg}
+            width={240}
+            height={105}
+          />
         </div>
 
         <h2 className={styles.title}>Start Your Project</h2>
@@ -103,7 +114,7 @@ export function ContactForm(): JSX.Element {
                 noValidate
                 aria-label="Contact Sogn Contracting"
               >
-                {/* Honeypot — hidden from real users, traps bots */}
+                {/* Honeypot */}
                 <div className={styles.honey} aria-hidden="true" tabIndex={-1}>
                   <label htmlFor="contact-website">Website</label>
                   <input
@@ -211,43 +222,5 @@ export function ContactForm(): JSX.Element {
         </div>
       </div>
     </section>
-  );
-}
-
-function ContactLogo(): JSX.Element {
-  return (
-    <svg
-      width="80"
-      height="56"
-      viewBox="0 0 120 80"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M10 65 L10 45 L40 20 L70 45 L70 65"
-        stroke="rgba(255,255,255,0.15)"
-        strokeWidth="3"
-        fill="none"
-      />
-      <path
-        d="M50 65 L50 45 L80 20 L110 45 L110 65"
-        stroke="rgba(255,255,255,0.15)"
-        strokeWidth="3"
-        fill="none"
-      />
-      <path
-        d="M30 55 L60 10 L90 55"
-        stroke="rgba(255,255,255,0.2)"
-        strokeWidth="4"
-        fill="none"
-      />
-      <path
-        d="M45 42 L60 18 L75 42"
-        stroke="#7CB342"
-        strokeWidth="3"
-        fill="none"
-        opacity="0.6"
-      />
-    </svg>
   );
 }

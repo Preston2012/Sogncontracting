@@ -1,6 +1,6 @@
 .section {
   padding: var(--space-2xl) 0;
-  background-color: var(--bg-light);
+  background-color: var(--bg-dark);
 }
 
 .inner {
@@ -13,7 +13,7 @@
 .title {
   font-family: var(--font-heading);
   font-size: var(--text-h2);
-  color: var(--charcoal);
+  color: var(--white);
   text-align: center;
 }
 
@@ -25,7 +25,7 @@
 }
 
 .card {
-  background-color: var(--white);
+  background-color: var(--bg-dark-card);
   border: 1px solid var(--border-light);
   border-left: 3px solid var(--sogn-green);
   border-radius: var(--radius-card);
@@ -36,7 +36,7 @@
 .quote {
   font-size: var(--text-body);
   line-height: var(--leading-relaxed);
-  color: var(--text-primary);
+  color: var(--white);
   font-style: italic;
   margin: 0 0 var(--space-md) 0;
 }
@@ -50,13 +50,13 @@
 .name {
   font-size: var(--text-small);
   font-weight: var(--weight-semibold);
-  color: var(--charcoal);
+  color: var(--white);
   font-style: normal;
 }
 
 .project {
   font-size: var(--text-caption);
-  color: var(--text-secondary);
+  color: var(--text-on-dark-sub);
 }
 
 @media (min-width: 768px) {

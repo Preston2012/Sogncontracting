@@ -26,6 +26,12 @@
   text-decoration: none;
 }
 
+.logoImg {
+  width: 40px;
+  height: auto;
+  display: block;
+}
+
 .logoText {
   font-family: var(--font-heading);
   font-size: 18px;

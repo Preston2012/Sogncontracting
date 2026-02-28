@@ -36,7 +36,14 @@ export function Nav(): JSX.Element {
       <div className={`container ${styles.inner}`}>
         {/* Logo / Home link */}
         <a href="/" className={styles.logo} aria-label="Sogn Contracting home">
-          <LogoMark />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/logo-mark.png"
+            alt=""
+            className={styles.logoImg}
+            width={40}
+            height={28}
+          />
           <span className={styles.logoText}>Sogn Contracting</span>
         </a>
 
@@ -88,50 +95,5 @@ export function Nav(): JSX.Element {
         </div>
       )}
     </nav>
-  );
-}
-
-/** Small SC logo mark for nav */
-function LogoMark(): JSX.Element {
-  return (
-    <svg
-      width="36"
-      height="28"
-      viewBox="0 0 120 80"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-hidden="true"
-    >
-      {/* Overlapping rooflines */}
-      <path
-        d="M10 65 L10 45 L40 20 L70 45 L70 65"
-        stroke="#2D2D2D"
-        strokeWidth="4"
-        fill="none"
-      />
-      <path
-        d="M50 65 L50 45 L80 20 L110 45 L110 65"
-        stroke="#2D2D2D"
-        strokeWidth="4"
-        fill="none"
-      />
-      {/* Center peak */}
-      <path
-        d="M30 55 L60 10 L90 55"
-        stroke="#2D2D2D"
-        strokeWidth="5"
-        fill="none"
-      />
-      {/* Green accent line */}
-      <path
-        d="M45 42 L60 18 L75 42"
-        stroke="#7CB342"
-        strokeWidth="3"
-        fill="none"
-      />
-      {/* Windows */}
-      <rect x="18" y="48" width="10" height="10" stroke="#2D2D2D" strokeWidth="2" fill="none" />
-      <rect x="92" y="48" width="10" height="10" stroke="#2D2D2D" strokeWidth="2" fill="none" />
-    </svg>
   );
 }

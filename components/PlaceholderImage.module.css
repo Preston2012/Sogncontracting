@@ -5,7 +5,7 @@
   justify-content: center;
   gap: var(--space-sm);
   background-color: var(--charcoal);
-  border: 1px solid var(--border-light);
+  border: 1px solid var(--border-dark);
   border-radius: var(--radius-card);
   overflow: hidden;
   width: 100%;
@@ -14,7 +14,7 @@
 .mark {
   width: 64px;
   height: auto;
-  color: rgba(124, 179, 66, 0.15);
+  color: rgba(114, 183, 37, 0.15);
 }
 
 .label {

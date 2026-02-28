@@ -62,13 +62,13 @@ ol {
 :root {
   /* Primary */
   --charcoal: #2D2D2D;
-  --sogn-green: #7CB342;
+  --sogn-green: #72B725;
   --white: #FFFFFF;
 
   /* Surfaces */
   --bg-light: #F5F5F5;
-  --bg-dark: #404040;
-  --bg-dark-card: #4A4A4A;
+  --bg-dark: #484848;
+  --bg-dark-card: #525252;
   --bg-footer: #333333;
 
   /* Text */
@@ -79,12 +79,12 @@ ol {
 
   /* Borders */
   --border-light: #E0E0E0;
-  --border-green: #7CB342;
+  --border-green: #72B725;
   --border-dark: rgba(255, 255, 255, 0.12);
 
   /* Accents */
-  --green-hover: #689F38;
-  --green-badge-bg: #7CB342;
+  --green-hover: #5F9A1F;
+  --green-badge-bg: #72B725;
   --green-badge-text: #FFFFFF;
 
   /* Radii */

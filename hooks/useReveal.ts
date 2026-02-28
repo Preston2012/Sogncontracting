@@ -1,17 +1,28 @@
 "use client";
+
 import { useEffect, useRef, useState } from "react";
 
-export function useReveal(threshold = 0.15) {
+export function useReveal(threshold = 0.15): {
+  ref: React.RefObject<HTMLDivElement>;
+  visible: boolean;
+} {
   const ref = useRef<HTMLDivElement>(null!);
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+
     const obs = new IntersectionObserver(
-      ([e]) => { if (e.isIntersecting) { setVisible(true); obs.disconnect(); } },
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          obs.disconnect();
+        }
+      },
       { threshold }
     );
+
     obs.observe(el);
     return () => obs.disconnect();
   }, [threshold]);
