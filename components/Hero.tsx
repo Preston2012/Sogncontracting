@@ -23,7 +23,7 @@ export function Hero(): JSX.Element {
           />
         </div>
 
-        <h1 className={styles.tagline}>Building You a Better Home</h1>
+        <h1 className={styles.tagline}>Building You A Better Home</h1>
 
         <p className={styles.subline}>
           Licensed general contractor serving Bandon and the Southern Oregon Coast. 30 years of residential and commercial construction.

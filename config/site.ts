@@ -1,6 +1,6 @@
 export const site = {
   name: "Sogn Contracting LLC",
-  tagline: "Building You a Better Home",
+  tagline: "Building You A Better Home",
   url: "https://sogncontracting.com",
   owner: "Paul Sogn",
   founded: "1995",
