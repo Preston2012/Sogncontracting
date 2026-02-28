@@ -1,0 +1,67 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  padding: 12px 28px;
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  font-weight: var(--weight-semibold);
+  line-height: 1;
+  border-radius: var(--radius-btn);
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
+  min-height: 44px;
+  min-width: 44px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* Primary: green filled, white text */
+.primary {
+  background-color: var(--sogn-green);
+  color: var(--white);
+  border: 2px solid var(--sogn-green);
+}
+
+.primary:hover {
+  background-color: var(--green-hover);
+  border-color: var(--green-hover);
+  transform: scale(1.02);
+}
+
+.primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Secondary: outlined charcoal */
+.secondary {
+  background-color: transparent;
+  color: var(--charcoal);
+  border: 2px solid var(--charcoal);
+}
+
+.secondary:hover {
+  background-color: var(--charcoal);
+  color: var(--white);
+  transform: scale(1.02);
+}
+
+/* Secondary Light: outlined white (for dark backgrounds) */
+.secondaryLight {
+  background-color: transparent;
+  color: var(--white);
+  border: 2px solid var(--white);
+}
+
+.secondaryLight:hover {
+  background-color: var(--white);
+  color: var(--charcoal);
+  transform: scale(1.02);
+}

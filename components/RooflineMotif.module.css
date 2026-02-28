@@ -1,0 +1,16 @@
+.motif {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--charcoal);
+}
+
+.svg {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+}

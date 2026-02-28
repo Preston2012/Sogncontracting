@@ -1,0 +1,43 @@
+.bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  justify-content: center;
+  padding: var(--space-md) 0;
+  position: sticky;
+  top: 64px;
+  z-index: 50;
+  background-color: var(--white);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.chip {
+  padding: var(--space-sm) var(--space-md);
+  font-size: var(--text-small);
+  font-weight: var(--weight-semibold);
+  border: 1px solid var(--charcoal);
+  border-radius: 20px;
+  background-color: transparent;
+  color: var(--charcoal);
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  min-height: 44px;
+  min-width: 44px;
+}
+
+.chip:hover {
+  border-color: var(--sogn-green);
+  color: var(--sogn-green);
+}
+
+.active {
+  background-color: var(--sogn-green);
+  color: var(--white);
+  border-color: var(--sogn-green);
+}
+
+.active:hover {
+  background-color: var(--green-hover);
+  border-color: var(--green-hover);
+  color: var(--white);
+}

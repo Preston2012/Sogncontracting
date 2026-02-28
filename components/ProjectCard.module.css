@@ -1,0 +1,90 @@
+.card {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  text-align: left;
+  background: var(--white);
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+  padding: 0;
+}
+
+.card:hover {
+  border-color: var(--sogn-green);
+}
+
+.imageWrap {
+  overflow: hidden;
+}
+
+.pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  background-color: var(--border-light);
+}
+
+.imgContainer {
+  position: relative;
+  overflow: hidden;
+}
+
+.badge {
+  position: absolute;
+  top: var(--space-sm);
+  left: var(--space-sm);
+  z-index: 2;
+  font-size: var(--text-caption);
+  font-weight: var(--weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 2px var(--space-sm);
+  border-radius: var(--radius-badge);
+  background-color: var(--charcoal);
+  color: var(--white);
+}
+
+.badgeAfter {
+  background-color: var(--green-badge-bg);
+  color: var(--green-badge-text);
+}
+
+.img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+.content {
+  padding: var(--space-md);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.categoryBadge {
+  font-size: var(--text-caption);
+  font-weight: var(--weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 2px var(--space-sm);
+  border-radius: var(--radius-badge);
+  background-color: var(--green-badge-bg);
+  color: var(--green-badge-text);
+  white-space: nowrap;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: var(--text-h3);
+  color: var(--charcoal);
+}
+
+@media (max-width: 479px) {
+  .pair {
+    grid-template-columns: 1fr;
+  }
+}

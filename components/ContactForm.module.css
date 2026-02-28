@@ -1,0 +1,256 @@
+.section {
+  position: relative;
+  background-color: var(--bg-dark);
+  padding: var(--space-2xl) 0;
+  overflow: hidden;
+}
+
+/* Radial lighten effect behind logo */
+.radialBg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 400px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 255, 255, 0.06) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.logoWrap {
+  margin-bottom: var(--space-sm);
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: var(--text-h2);
+  color: var(--white);
+  text-align: center;
+}
+
+.subtitle {
+  font-size: var(--text-body);
+  color: var(--text-on-dark-sub);
+  text-align: center;
+  max-width: 440px;
+  margin: 0;
+}
+
+.formWrap {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+  width: 100%;
+  max-width: 640px;
+}
+
+/* Form card */
+.formCard {
+  background-color: var(--bg-dark-card);
+  border: 1px solid var(--border-dark);
+  border-radius: var(--radius-card);
+  padding: var(--space-lg);
+}
+
+.field {
+  margin-bottom: var(--space-md);
+}
+
+.label {
+  display: block;
+  font-size: var(--text-small);
+  font-weight: var(--weight-semibold);
+  color: var(--text-on-dark-sub);
+  margin-bottom: var(--space-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 12px var(--space-md);
+  background-color: transparent;
+  border: 1px solid var(--border-green);
+  border-radius: var(--radius-input);
+  color: var(--white);
+  font-size: var(--text-body);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: var(--text-on-dark-sub);
+  opacity: 0.6;
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: var(--sogn-green);
+  box-shadow: 0 0 0 3px rgba(124, 179, 66, 0.2);
+}
+
+.inputError {
+  border-color: #E57373;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.error {
+  display: block;
+  font-size: var(--text-caption);
+  color: #E57373;
+  margin-top: var(--space-xs);
+}
+
+.submit {
+  width: 100%;
+  padding: 14px var(--space-lg);
+  background-color: var(--sogn-green);
+  color: var(--white);
+  font-size: var(--text-body);
+  font-weight: var(--weight-semibold);
+  border: none;
+  border-radius: var(--radius-btn);
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+  min-height: 44px;
+  margin-top: var(--space-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.submit:hover {
+  background-color: var(--green-hover);
+  transform: scale(1.02);
+}
+
+.submit:active {
+  transform: scale(0.98);
+}
+
+.submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Success / Error messages */
+.successMsg {
+  text-align: center;
+  padding: var(--space-xl) var(--space-md);
+}
+
+.successTitle {
+  font-family: var(--font-heading);
+  font-size: var(--text-h3);
+  font-weight: var(--weight-bold);
+  color: var(--sogn-green);
+  margin-bottom: var(--space-sm);
+}
+
+.successBody {
+  font-size: var(--text-body);
+  color: var(--text-on-dark-sub);
+  margin: 0;
+}
+
+.successLink {
+  color: var(--white);
+  text-decoration: underline;
+}
+
+.errorMsg {
+  font-size: var(--text-small);
+  color: #E57373;
+  text-align: center;
+  margin-top: var(--space-md);
+}
+
+.errorLink {
+  color: var(--white);
+  text-decoration: underline;
+}
+
+/* Alternate contact */
+.altContact {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  align-items: center;
+}
+
+.altItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.altLabel {
+  font-size: var(--text-caption);
+  font-weight: var(--weight-semibold);
+  color: var(--text-on-dark-sub);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.altValue {
+  font-size: var(--text-h3);
+  font-weight: var(--weight-semibold);
+  color: var(--white);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.altValue:hover {
+  color: var(--sogn-green);
+}
+
+@media (min-width: 768px) {
+  .formWrap {
+    grid-template-columns: 1fr auto;
+    max-width: 800px;
+    align-items: start;
+  }
+
+  .altContact {
+    padding-top: var(--space-xl);
+  }
+}
+
+/* Honeypot — invisible to real users, catches bots */
+.honey {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+}

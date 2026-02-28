@@ -1,0 +1,124 @@
+.footer {
+  background-color: var(--bg-footer);
+  color: var(--text-on-dark);
+  padding: var(--space-xl) 0 var(--space-lg);
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+}
+
+/* Brand section */
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.companyName {
+  font-family: var(--font-heading);
+  font-size: var(--text-h3);
+  font-weight: var(--weight-bold);
+  color: var(--white);
+}
+
+.scripture {
+  font-size: var(--text-small);
+  line-height: var(--leading-relaxed);
+  color: var(--text-on-dark-sub);
+  max-width: 400px;
+  margin: 0;
+}
+
+.verse {
+  color: var(--sogn-green);
+  font-weight: var(--weight-semibold);
+  font-style: normal;
+}
+
+/* Contact */
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.contactLink {
+  font-size: var(--text-small);
+  color: var(--text-on-dark-sub);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.contactLink:hover {
+  color: var(--sogn-green);
+}
+
+.address {
+  font-size: var(--text-small);
+  color: var(--text-on-dark-sub);
+}
+
+/* Nav */
+.nav {
+  /* empty for specificity */
+}
+
+.navList {
+  display: flex;
+  gap: var(--space-lg);
+  list-style: none;
+}
+
+.navLink {
+  font-size: var(--text-small);
+  font-weight: var(--weight-semibold);
+  color: var(--text-on-dark-sub);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  transition: color 0.15s ease;
+}
+
+.navLink:hover {
+  color: var(--white);
+}
+
+/* Bottom bar */
+.bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-sm);
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--border-dark);
+  margin-top: var(--space-sm);
+}
+
+.ccb {
+  font-size: var(--text-caption);
+  font-weight: var(--weight-semibold);
+  color: var(--sogn-green);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.copyright {
+  font-size: var(--text-caption);
+  color: var(--text-on-dark-sub);
+}
+
+/* Desktop layout */
+@media (min-width: 768px) {
+  .inner {
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: var(--space-xl);
+  }
+
+  .bottom {
+    grid-column: 1 / -1;
+  }
+}

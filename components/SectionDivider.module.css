@@ -1,0 +1,69 @@
+.divider {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+/* Diagonal green accent divider */
+.diagonal {
+  position: relative;
+  height: 60px;
+}
+
+.diagonal::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    172deg,
+    var(--white) 49.5%,
+    var(--sogn-green) 49.5%,
+    var(--sogn-green) 50.5%,
+    var(--bg-light) 50.5%
+  );
+}
+
+.diagonal.flip::before {
+  background: linear-gradient(
+    188deg,
+    var(--bg-light) 49.5%,
+    var(--sogn-green) 49.5%,
+    var(--sogn-green) 50.5%,
+    var(--white) 50.5%
+  );
+}
+
+/* Thin architectural rule line */
+.rule {
+  height: 1px;
+  background-color: var(--border-light);
+  margin: var(--space-xl) auto;
+  max-width: var(--container-max);
+  padding: 0 var(--container-padding);
+}
+
+/* Rule with green accent segment */
+.ruleGreen {
+  height: 1px;
+  margin: var(--space-xl) auto;
+  max-width: var(--container-max);
+  padding: 0 var(--container-padding);
+  background: linear-gradient(
+    90deg,
+    var(--border-light) 0%,
+    var(--border-light) 40%,
+    var(--sogn-green) 40%,
+    var(--sogn-green) 60%,
+    var(--border-light) 60%,
+    var(--border-light) 100%
+  );
+}
+
+@media (max-width: 640px) {
+  .diagonal {
+    height: 40px;
+  }
+}

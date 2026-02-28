@@ -1,0 +1,22 @@
+.wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.diamond {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border: 2px solid var(--sogn-green);
+  transform: rotate(45deg);
+  opacity: 0.3;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  padding: var(--space-md);
+}
