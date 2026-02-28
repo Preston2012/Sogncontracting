@@ -33,10 +33,7 @@
   left: 0;
   width: 40%;
   height: 2px;
-  background: linear-gradient(90deg, transparent 0%, var(--sogn-green) 100%);
-  opacity: 0.7;
-  transform: rotate(-2deg);
-  transform-origin: right center;
+  background: linear-gradient(90deg, transparent 0%, #508019 100%);
   pointer-events: none;
 }
 
@@ -46,10 +43,7 @@
   right: 0;
   width: 40%;
   height: 2px;
-  background: linear-gradient(270deg, transparent 0%, var(--sogn-green) 100%);
-  opacity: 0.7;
-  transform: rotate(2deg);
-  transform-origin: left center;
+  background: linear-gradient(270deg, transparent 0%, #508019 100%);
   pointer-events: none;
 }
 
@@ -78,7 +72,7 @@
   width: 280px;
   height: auto;
   display: block;
-  filter: drop-shadow(0 0 40px rgba(255, 255, 255, 0.15));
+  
 }
 
 .title {
@@ -289,9 +283,14 @@
   }
 
   .accentLineLeft,
-  .accentLineRight {
-    display: none;
-  }
+.accentLineRight {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  width: 40%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent 0%, #508019 100%);
+  pointer-events: none;
 }
 
 /* Honeypot */

@@ -88,8 +88,7 @@
   width: 6px;
   height: 6px;
   background-color: var(--sogn-green);
-  border-radius: 1px;
-  transform: rotate(45deg);
+  border-radius: 50%;
 }
 
 .footer {

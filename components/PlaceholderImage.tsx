@@ -29,7 +29,7 @@ export function PlaceholderImage({
         <path
           d="M20 70 L20 40 L60 10 L100 40 L100 70"
           stroke="currentColor"
-          strokeWidth="2.5"
+          strokeWidth="2"
           fill="none"
         />
         <text

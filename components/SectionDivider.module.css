@@ -4,7 +4,7 @@
   line-height: 0;
 }
 
-/* Clean horizontal green accent line */
+/* Clean horizontal green accent line — no opacity, solid color */
 .diagonal {
   height: 2px;
   max-width: var(--container-max);
@@ -12,20 +12,25 @@
   background: linear-gradient(
     90deg,
     transparent 0%,
-    var(--sogn-green) 20%,
-    var(--sogn-green) 80%,
+    #4A7A16 20%,
+    #4A7A16 80%,
     transparent 100%
   );
-  opacity: 0.4;
 }
 
 .diagonal.flip {
-  opacity: 0.3;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    #3D6612 20%,
+    #3D6612 80%,
+    transparent 100%
+  );
 }
 
 /* Thin architectural rule line */
 .rule {
-  height: 1px;
+  height: 2px;
   background-color: var(--border-dark);
   margin: 0 auto;
   max-width: var(--container-max);
@@ -34,7 +39,7 @@
 
 /* Rule with green accent segment */
 .ruleGreen {
-  height: 1px;
+  height: 2px;
   margin: 0 auto;
   max-width: var(--container-max);
   padding: 0 var(--container-padding);

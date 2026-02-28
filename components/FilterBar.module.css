@@ -5,7 +5,7 @@
   justify-content: center;
   padding: var(--space-md) 0;
   position: sticky;
-  top: 64px;
+  top: 80px;
   z-index: 50;
   background-color: var(--white);
   border-bottom: 1px solid var(--border-light);

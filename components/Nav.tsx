@@ -41,8 +41,8 @@ export function Nav(): JSX.Element {
             src="/logo-mark.png"
             alt=""
             className={styles.logoImg}
-            width={40}
-            height={28}
+            width={100}
+            height={50}
           />
           <span className={styles.logoText}>Sogn Contracting</span>
         </a>

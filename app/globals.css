@@ -24,6 +24,7 @@ body {
   background-color: var(--white);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 img,
@@ -32,6 +33,10 @@ video,
 svg {
   display: block;
   max-width: 100%;
+}
+
+img {
+  image-rendering: -webkit-optimize-contrast;
 }
 
 input,
@@ -81,7 +86,7 @@ ol {
   /* Borders */
   --border-light: #E0E0E0;
   --border-green: #72B725;
-  --border-dark: rgba(255, 255, 255, 0.12);
+  --border-dark: #5C5C5C;
 
   /* Accents */
   --green-hover: #5F9A1F;
@@ -160,7 +165,7 @@ p:last-child {
 
 /* --- Selection --- */
 ::selection {
-  background-color: rgba(124, 179, 66, 0.3);
+  background-color: rgba(114, 183, 37, 0.3);
   color: var(--charcoal);
 }
 
