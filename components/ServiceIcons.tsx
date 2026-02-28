@@ -30,265 +30,199 @@ function IconWrapper({
   );
 }
 
-/** House frame with wrench + hammer, green tool accents */
+/** House with hammer — General Contracting */
 export function IconContracting(props: IconProps): JSX.Element {
   return (
     <IconWrapper {...props} label="General contracting">
-      {/* House frame */}
-      <path
-        d="M8 36 L8 26 L32 8 L56 26 L56 36"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M14 30 L14 54 L50 54 L50 30"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      {/* Hammer (green accent) */}
-      <line x1="26" y1="36" x2="26" y2="50" stroke="#72B725" strokeWidth="2" strokeLinecap="round" />
-      <rect x="22" y="33" width="8" height="5" rx="1" stroke="#72B725" strokeWidth="1.5" fill="none" />
-      {/* Wrench */}
-      <line x1="38" y1="36" x2="38" y2="50" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-      <circle cx="38" cy="34" r="3" stroke="currentColor" strokeWidth="1.5" fill="none" />
+      <path d="M10 34 L32 14 L54 34" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M16 30 L16 52 L48 52 L48 30" stroke="currentColor" strokeWidth="2.5" strokeLinejoin="round" />
+      <rect x="26" y="38" width="12" height="14" stroke="currentColor" strokeWidth="2" rx="1" />
+      {/* Hammer — bold, clear */}
+      <rect x="44" y="8" width="12" height="6" rx="1" fill="#72B725" />
+      <line x1="48" y1="14" x2="48" y2="26" stroke="#72B725" strokeWidth="2.5" strokeLinecap="round" />
     </IconWrapper>
   );
 }
 
-/** House outline with pencil/drafting element, green window */
+/** Blueprint/floor plan — Custom Homes */
 export function IconCustomHome(props: IconProps): JSX.Element {
   return (
     <IconWrapper {...props} label="Custom homes">
-      {/* House */}
-      <path
-        d="M6 30 L32 8 L58 30"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M12 26 L12 56 L52 56 L52 26"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      {/* Green window */}
-      <rect x="22" y="34" width="10" height="10" stroke="#72B725" strokeWidth="1.5" fill="none" />
-      <line x1="27" y1="34" x2="27" y2="44" stroke="#72B725" strokeWidth="1" />
-      <line x1="22" y1="39" x2="32" y2="39" stroke="#72B725" strokeWidth="1" />
-      {/* Door */}
-      <rect x="36" y="40" width="8" height="16" stroke="currentColor" strokeWidth="1.5" fill="none" />
-      <circle cx="42" cy="49" r="1" fill="currentColor" />
-      {/* Pencil/drafting accent */}
-      <line x1="50" y1="10" x2="56" y2="4" stroke="#72B725" strokeWidth="1.5" strokeLinecap="round" />
-      <line x1="48" y1="12" x2="54" y2="6" stroke="#72B725" strokeWidth="1.5" strokeLinecap="round" />
+      {/* Blueprint sheet */}
+      <rect x="10" y="10" width="34" height="44" rx="2" stroke="currentColor" strokeWidth="2.5" />
+      {/* Floor plan lines inside */}
+      <line x1="10" y1="28" x2="44" y2="28" stroke="currentColor" strokeWidth="2" />
+      <line x1="28" y1="10" x2="28" y2="28" stroke="currentColor" strokeWidth="2" />
+      <line x1="28" y1="38" x2="44" y2="38" stroke="currentColor" strokeWidth="2" />
+      {/* Pencil — large diagonal */}
+      <path d="M48 12 L54 12 L54 42 L51 48 L48 42 Z" stroke="#72B725" strokeWidth="2" fill="none" strokeLinejoin="round" />
+      <line x1="48" y1="38" x2="54" y2="38" stroke="#72B725" strokeWidth="2" />
     </IconWrapper>
   );
 }
 
-/** Paint roller + trowel over house shape, green accent */
+/** Paintbrush over house — Renovations */
 export function IconRenovation(props: IconProps): JSX.Element {
   return (
     <IconWrapper {...props} label="Renovations">
-      {/* Simplified house silhouette */}
-      <path
-        d="M10 56 L10 28 L32 12 L54 28 L54 56"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      {/* Paint roller (green) */}
-      <rect x="20" y="30" width="14" height="8" rx="2" stroke="#72B725" strokeWidth="2" fill="none" />
-      <line x1="27" y1="38" x2="27" y2="46" stroke="#72B725" strokeWidth="2" strokeLinecap="round" />
-      <line x1="27" y1="26" x2="27" y2="30" stroke="#72B725" strokeWidth="1.5" strokeLinecap="round" />
-      {/* Trowel */}
-      <line x1="40" y1="32" x2="40" y2="48" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-      <path
-        d="M36 30 L40 26 L44 30"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        fill="none"
-      />
+      <path d="M8 36 L28 18 L48 36" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M14 32 L14 52 L42 52 L42 32" stroke="currentColor" strokeWidth="2.5" strokeLinejoin="round" />
+      {/* Paintbrush — thick and readable */}
+      <rect x="48" y="8" width="8" height="20" rx="2" stroke="#72B725" strokeWidth="2" fill="none" />
+      <line x1="52" y1="28" x2="52" y2="38" stroke="#72B725" strokeWidth="3" strokeLinecap="round" />
+      <line x1="48" y1="18" x2="56" y2="18" stroke="#72B725" strokeWidth="2" />
     </IconWrapper>
   );
 }
 
-/** House with green "+" circle */
+/** House with bold plus — Additions */
 export function IconAddition(props: IconProps): JSX.Element {
   return (
     <IconWrapper {...props} label="Additions">
-      {/* House */}
-      <path
-        d="M6 32 L30 12 L54 32"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M12 28 L12 56 L48 56 L48 28"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      {/* Window */}
-      <rect x="20" y="36" width="10" height="8" stroke="currentColor" strokeWidth="1.5" fill="none" />
-      {/* Green plus circle */}
-      <circle cx="48" cy="18" r="10" stroke="#72B725" strokeWidth="2" fill="none" />
-      <line x1="48" y1="13" x2="48" y2="23" stroke="#72B725" strokeWidth="2" strokeLinecap="round" />
-      <line x1="43" y1="18" x2="53" y2="18" stroke="#72B725" strokeWidth="2" strokeLinecap="round" />
+      <path d="M8 34 L28 16 L48 34" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M14 30 L14 52 L42 52 L42 30" stroke="currentColor" strokeWidth="2.5" strokeLinejoin="round" />
+      <rect x="22" y="36" width="8" height="8" stroke="currentColor" strokeWidth="2" rx="1" />
+      {/* Plus circle — large and bold */}
+      <circle cx="50" cy="44" r="10" stroke="#72B725" strokeWidth="2.5" />
+      <line x1="50" y1="38" x2="50" y2="50" stroke="#72B725" strokeWidth="2.5" strokeLinecap="round" />
+      <line x1="44" y1="44" x2="56" y2="44" stroke="#72B725" strokeWidth="2.5" strokeLinecap="round" />
     </IconWrapper>
   );
 }
 
-/** Roofline with shingle detail, green accent line */
+/** Bold roof with shingle pattern — Roofing */
 export function IconRoofing(props: IconProps): JSX.Element {
   return (
     <IconWrapper {...props} label="Roofing">
-      {/* Main roofline */}
-      <path
-        d="M4 36 L32 10 L60 36"
-        stroke="currentColor"
-        strokeWidth="2.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      {/* Shingle rows */}
-      <path d="M12 32 L32 16 L52 32" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M18 28 L32 18 L46 28" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
+      {/* Large bold roof */}
+      <path d="M4 40 L32 10 L60 40" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+      {/* Shingle row lines */}
+      <line x1="14" y1="30" x2="50" y2="30" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      <line x1="18" y1="35" x2="46" y2="35" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
       {/* House walls */}
-      <line x1="10" y1="36" x2="10" y2="56" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-      <line x1="54" y1="36" x2="54" y2="56" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-      <line x1="10" y1="56" x2="54" y2="56" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-      {/* Green accent line along roof edge */}
-      <path d="M8 38 L32 14 L56 38" stroke="#72B725" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M12 38 L12 56 L52 56 L52 38" stroke="currentColor" strokeWidth="2.5" strokeLinejoin="round" />
+      {/* Bold chimney with cap */}
+      <rect x="40" y="14" width="8" height="16" stroke="#72B725" strokeWidth="2.5" fill="none" />
+      <line x1="38" y1="14" x2="50" y2="14" stroke="#72B725" strokeWidth="2.5" strokeLinecap="round" />
     </IconWrapper>
   );
 }
 
-/** Deck/pergola outline, green nature element */
+/** Deck with railing — simplified and bold */
 export function IconDeck(props: IconProps): JSX.Element {
   return (
     <IconWrapper {...props} label="Decks and outdoor living">
-      {/* Pergola top beams */}
-      <line x1="6" y1="16" x2="58" y2="16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-      <line x1="6" y1="20" x2="58" y2="20" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-      {/* Pergola posts */}
-      <line x1="12" y1="16" x2="12" y2="44" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-      <line x1="52" y1="16" x2="52" y2="44" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      {/* Top railing */}
+      <line x1="6" y1="18" x2="58" y2="18" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
+      {/* Railing posts */}
+      <line x1="10" y1="18" x2="10" y2="32" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
+      <line x1="32" y1="18" x2="32" y2="32" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
+      <line x1="54" y1="18" x2="54" y2="32" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
+      {/* Deck platform */}
+      <rect x="6" y="32" width="52" height="6" rx="1" stroke="currentColor" strokeWidth="2.5" />
+      {/* Support legs */}
+      <line x1="14" y1="38" x2="14" y2="54" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
+      <line x1="50" y1="38" x2="50" y2="54" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
       {/* Deck boards */}
-      <line x1="6" y1="44" x2="58" y2="44" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-      <line x1="6" y1="48" x2="58" y2="48" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-      <line x1="6" y1="52" x2="58" y2="52" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-      {/* Deck supports */}
-      <line x1="8" y1="44" x2="8" y2="58" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-      <line x1="56" y1="44" x2="56" y2="58" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-      {/* Green nature element (leaf/plant) */}
-      <path
-        d="M32 30 Q36 22 44 24 Q42 32 34 34 Q32 34 32 30Z"
-        stroke="#72B725"
-        strokeWidth="1.5"
-        fill="none"
-      />
-      <line x1="32" y1="30" x2="32" y2="42" stroke="#72B725" strokeWidth="1.5" strokeLinecap="round" />
+      <line x1="6" y1="44" x2="58" y2="44" stroke="currentColor" strokeWidth="2" />
+      <line x1="6" y1="50" x2="58" y2="50" stroke="currentColor" strokeWidth="2" />
+      {/* Green tree/leaf accent */}
+      <circle cx="46" cy="10" r="5" fill="#72B725" opacity="0.8" />
+      <line x1="46" y1="15" x2="46" y2="18" stroke="#72B725" strokeWidth="2" />
     </IconWrapper>
   );
 }
 
-/** Multi-story building outline, green window accents */
+/** Multi-story building — Commercial */
 export function IconCommercial(props: IconProps): JSX.Element {
   return (
     <IconWrapper {...props} label="Commercial construction">
-      {/* Building outline */}
-      <rect x="10" y="12" width="34" height="44" stroke="currentColor" strokeWidth="2" fill="none" />
-      {/* Entrance */}
-      <rect x="22" y="44" width="10" height="12" stroke="currentColor" strokeWidth="1.5" fill="none" />
-      {/* Windows row 1 (green) */}
-      <rect x="16" y="18" width="6" height="6" stroke="#72B725" strokeWidth="1.5" fill="none" />
-      <rect x="26" y="18" width="6" height="6" stroke="#72B725" strokeWidth="1.5" fill="none" />
-      <rect x="36" y="18" width="6" height="6" stroke="#72B725" strokeWidth="1.5" fill="none" />
-      {/* Windows row 2 */}
-      <rect x="16" y="30" width="6" height="6" stroke="currentColor" strokeWidth="1.5" fill="none" />
-      <rect x="26" y="30" width="6" height="6" stroke="currentColor" strokeWidth="1.5" fill="none" />
-      <rect x="36" y="30" width="6" height="6" stroke="currentColor" strokeWidth="1.5" fill="none" />
+      {/* Main building */}
+      <rect x="10" y="10" width="30" height="44" rx="1" stroke="currentColor" strokeWidth="2.5" />
+      {/* Windows — 6x6, larger and clearer */}
+      <rect x="16" y="16" width="6" height="6" fill="#72B725" rx="1" />
+      <rect x="28" y="16" width="6" height="6" fill="#72B725" rx="1" />
+      <rect x="16" y="28" width="6" height="6" fill="#72B725" rx="1" />
+      <rect x="28" y="28" width="6" height="6" fill="#72B725" rx="1" />
+      <rect x="16" y="40" width="6" height="6" fill="#72B725" rx="1" />
+      <rect x="28" y="40" width="6" height="6" fill="#72B725" rx="1" />
+      {/* Door */}
+      <rect x="22" y="48" width="6" height="6" stroke="currentColor" strokeWidth="2" rx="1" />
       {/* Side wing */}
-      <rect x="44" y="28" width="14" height="28" stroke="currentColor" strokeWidth="2" fill="none" />
-      <rect x="48" y="34" width="6" height="6" stroke="#72B725" strokeWidth="1.5" fill="none" />
-      <rect x="48" y="44" width="6" height="6" stroke="currentColor" strokeWidth="1.5" fill="none" />
+      <rect x="40" y="24" width="16" height="30" rx="1" stroke="currentColor" strokeWidth="2.5" />
+      <rect x="44" y="30" width="6" height="6" fill="#72B725" rx="1" />
+      <rect x="44" y="42" width="6" height="6" fill="#72B725" rx="1" />
     </IconWrapper>
   );
 }
 
-/** Foundation/slab with trowel, green accent */
+/** Concrete slab with trowel — bold version */
 export function IconConcrete(props: IconProps): JSX.Element {
   return (
     <IconWrapper {...props} label="Site work and concrete">
-      {/* Concrete slab (perspective) */}
-      <path
-        d="M4 38 L20 26 L60 26 L44 38 Z"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinejoin="round"
-        fill="none"
-      />
-      {/* Slab depth */}
-      <path
-        d="M4 38 L4 44 L44 44 L44 38"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinejoin="round"
-        fill="none"
-      />
-      <line x1="44" y1="44" x2="60" y2="32" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-      <line x1="60" y1="26" x2="60" y2="32" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-      {/* Surface texture lines */}
-      <line x1="16" y1="30" x2="40" y2="30" stroke="currentColor" strokeWidth="1" opacity="0.5" />
-      <line x1="12" y1="34" x2="42" y2="34" stroke="currentColor" strokeWidth="1" opacity="0.5" />
-      {/* Trowel (green) */}
-      <line x1="30" y1="14" x2="30" y2="24" stroke="#72B725" strokeWidth="2" strokeLinecap="round" />
-      <path
-        d="M24 12 L36 12 L34 16 L26 16 Z"
-        stroke="#72B725"
-        strokeWidth="1.5"
-        strokeLinejoin="round"
-        fill="none"
-      />
+      {/* 3D concrete slab */}
+      <path d="M6 36 L18 26 L58 26 L58 46 L46 56 L6 56 Z" stroke="currentColor" strokeWidth="2.5" strokeLinejoin="round" />
+      <line x1="58" y1="26" x2="46" y2="36" stroke="currentColor" strokeWidth="2" />
+      <line x1="46" y1="36" x2="46" y2="56" stroke="currentColor" strokeWidth="2" />
+      <line x1="6" y1="36" x2="46" y2="36" stroke="currentColor" strokeWidth="2" />
+      {/* Trowel — larger, bolder */}
+      <path d="M24 14 L38 8 L42 16 L28 22 Z" fill="#72B725" />
+      <line x1="26" y1="18" x2="18" y2="28" stroke="#72B725" strokeWidth="3" strokeLinecap="round" />
     </IconWrapper>
   );
 }
 
-/** Map icon ID to component */
-const iconMap: Record<string, (props: IconProps) => JSX.Element> = {
-  contracting: IconContracting,
-  "custom-home": IconCustomHome,
-  renovation: IconRenovation,
-  addition: IconAddition,
-  roofing: IconRoofing,
-  deck: IconDeck,
-  commercial: IconCommercial,
-  concrete: IconConcrete,
-};
-
-interface ServiceIconProps extends IconProps {
-  name: string;
+/** Toolbox with wrench — Repairs */
+export function IconRepairs(props: IconProps): JSX.Element {
+  return (
+    <IconWrapper {...props} label="Repairs and maintenance">
+      {/* Toolbox body */}
+      <rect x="8" y="26" width="48" height="26" rx="2" stroke="currentColor" strokeWidth="2.5" />
+      {/* Lid line */}
+      <line x1="8" y1="36" x2="56" y2="36" stroke="currentColor" strokeWidth="2" />
+      {/* Handle */}
+      <path d="M22 26 L22 18 L42 18 L42 26" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+      {/* Latch — centered, bold */}
+      <rect x="27" y="30" width="10" height="10" rx="2" fill="#72B725" />
+      {/* Wrench — repositioned inside viewbox */}
+      <line x1="44" y1="14" x2="50" y2="8" stroke="#72B725" strokeWidth="2.5" strokeLinecap="round" />
+      <circle cx="50" cy="8" r="4" stroke="#72B725" strokeWidth="2" fill="none" />
+    </IconWrapper>
+  );
 }
 
+/** Icon selector component */
 export function ServiceIcon({
   name,
   size = 64,
   className = "",
-}: ServiceIconProps): JSX.Element | null {
-  const Component = iconMap[name];
-  if (!Component) return null;
-  return <Component size={size} className={className} />;
+}: {
+  name: string;
+  size?: number;
+  className?: string;
+}): JSX.Element {
+  const props = { size, className };
+
+  switch (name) {
+    case "icon-contracting":
+      return <IconContracting {...props} />;
+    case "icon-custom-home":
+      return <IconCustomHome {...props} />;
+    case "icon-renovation":
+      return <IconRenovation {...props} />;
+    case "icon-addition":
+      return <IconAddition {...props} />;
+    case "icon-roofing":
+      return <IconRoofing {...props} />;
+    case "icon-deck":
+      return <IconDeck {...props} />;
+    case "icon-commercial":
+      return <IconCommercial {...props} />;
+    case "icon-concrete":
+      return <IconConcrete {...props} />;
+    case "icon-repairs":
+      return <IconRepairs {...props} />;
+    default:
+      return <IconContracting {...props} />;
+  }
 }

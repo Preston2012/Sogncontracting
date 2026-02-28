@@ -69,6 +69,7 @@ ol {
   --bg-light: #F5F5F5;
   --bg-dark: #484848;
   --bg-dark-card: #525252;
+  --bg-dark-alt: #3E3E3E;     /* Alternate dark section for rhythm */
   --bg-footer: #333333;
 
   /* Text */

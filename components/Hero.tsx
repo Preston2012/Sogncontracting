@@ -18,8 +18,8 @@ export function Hero(): JSX.Element {
             src="/logo-full.png"
             alt="Sogn Contracting LLC logo"
             className={styles.logo}
-            width={280}
-            height={122}
+            width={360}
+            height={166}
           />
         </div>
 

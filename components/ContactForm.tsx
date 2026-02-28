@@ -85,8 +85,8 @@ export function ContactForm(): JSX.Element {
             src="/logo-full.png"
             alt=""
             className={styles.logoImg}
-            width={240}
-            height={105}
+            width={280}
+            height={130}
           />
         </div>
 

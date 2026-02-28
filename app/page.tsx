@@ -20,9 +20,12 @@ export default function HomePage(): JSX.Element {
       <Hero />
       <SectionDivider variant="diagonal" />
       <ServiceGrid />
+      <SectionDivider variant="diagonal" flip />
       <FeaturedProjects />
+      <SectionDivider variant="diagonal" />
       {features.testimonials && <Testimonials />}
       <AboutSection />
+      <SectionDivider variant="diagonal" flip />
       <ContactForm />
     </>
   );
