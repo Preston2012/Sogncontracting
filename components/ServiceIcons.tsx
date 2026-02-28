@@ -60,17 +60,14 @@ export function IconCustomHome(props: IconProps): JSX.Element {
 export function IconRenovation(props: IconProps): JSX.Element {
   return (
     <IconWrapper {...props} label="Renovations">
-      {/* Hammer */}
-      <rect x="4" y="6" width="14" height="8" rx="1" fill="currentColor" />
-      <rect x="8" y="14" width="4" height="24" rx="1" fill="currentColor" />
-      {/* Saw */}
-      <rect x="26" y="4" width="14" height="6" rx="1" fill="#72B725" />
-      <line x1="32" y1="10" x2="32" y2="16" stroke="#72B725" strokeWidth="2" />
-      <rect x="28" y="16" width="12" height="26" rx="1" stroke="#72B725" strokeWidth="2" fill="none" />
-      {/* Saw teeth */}
-      <line x1="28" y1="22" x2="32" y2="22" stroke="#72B725" strokeWidth="2" />
-      <line x1="28" y1="28" x2="32" y2="28" stroke="#72B725" strokeWidth="2" />
-      <line x1="28" y1="34" x2="32" y2="34" stroke="#72B725" strokeWidth="2" />
+      {/* Left hammer handle — bottom-left to upper-right */}
+      <line x1="6" y1="42" x2="28" y2="12" stroke="currentColor" strokeWidth="4" strokeLinecap="round" />
+      {/* Left hammer head */}
+      <rect x="22" y="4" width="16" height="8" rx="2" fill="currentColor" />
+      {/* Right pick handle — bottom-right to upper-left */}
+      <line x1="42" y1="42" x2="20" y2="12" stroke="#72B725" strokeWidth="4" strokeLinecap="round" />
+      {/* Right pick head */}
+      <rect x="10" y="4" width="16" height="8" rx="2" fill="#72B725" />
     </IconWrapper>
   );
 }
