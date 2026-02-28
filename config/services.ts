@@ -159,7 +159,7 @@ export const services: ServiceData[] = [
     title: "Repairs & Maintenance",
     description:
       "Dependable solutions for all your property repair needs. No job too small when it comes to keeping your home in top shape.",
-    icon: "contracting",
+    icon: "repairs",
     scopeTitle: "Process",
     scopeItems: [
       { text: "Inspection and assessment" },

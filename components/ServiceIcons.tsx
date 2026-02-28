@@ -204,23 +204,23 @@ export function ServiceIcon({
   const props = { size, className };
 
   switch (name) {
-    case "icon-contracting":
+    case "contracting":
       return <IconContracting {...props} />;
-    case "icon-custom-home":
+    case "custom-home":
       return <IconCustomHome {...props} />;
-    case "icon-renovation":
+    case "renovation":
       return <IconRenovation {...props} />;
-    case "icon-addition":
+    case "addition":
       return <IconAddition {...props} />;
-    case "icon-roofing":
+    case "roofing":
       return <IconRoofing {...props} />;
-    case "icon-deck":
+    case "deck":
       return <IconDeck {...props} />;
-    case "icon-commercial":
+    case "commercial":
       return <IconCommercial {...props} />;
-    case "icon-concrete":
+    case "concrete":
       return <IconConcrete {...props} />;
-    case "icon-repairs":
+    case "repairs":
       return <IconRepairs {...props} />;
     default:
       return <IconContracting {...props} />;
