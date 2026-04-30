@@ -11,7 +11,7 @@ export interface PhotoPair {
 export interface ProjectData {
   id: string;
   title: string;
-  category: "remodeling" | "exterior" | "commercial" | "concrete";
+  category: "remodeling" | "exterior";
   description: string;
   pairs: PhotoPair[];
   extras?: string[];
@@ -23,8 +23,6 @@ export const categories = [
   { id: "all", label: "All" },
   { id: "remodeling", label: "Remodeling" },
   { id: "exterior", label: "Exterior" },
-  { id: "commercial", label: "Commercial" },
-  { id: "concrete", label: "Concrete" },
 ] as const;
 
 export type CategoryId = (typeof categories)[number]["id"];
