@@ -1,6 +1,6 @@
 // config/projects.ts
 // Gallery project data. visible: true = real photos. visible: false = branded placeholder.
-// Updated 2026-04-25: 5 projects live with photos from Paul. 4 awaiting resend (blank attachments).
+// Updated 2026-04-29: Drop 2 - living/dining live, exterior renamed and live, kitchen-2025 swap fix.
 
 export interface PhotoPair {
   before: string;
@@ -42,17 +42,6 @@ export const projects: ProjectData[] = [
     visible: true,
   },
   {
-    id: "kitchen-2025",
-    title: "Kitchen Remodel",
-    category: "remodeling",
-    description: "Full kitchen rebuild. White shaker cabinets, dark hardwood flooring, stainless appliances, and brushed nickel hardware.",
-    pairs: [
-      { before: "/projects/kitchen-2025/before-1.webp", after: "/projects/kitchen-2025/after-1.webp", label: "Main view" },
-    ],
-    featured: true,
-    visible: true,
-  },
-  {
     id: "kitchen-2023",
     title: "Kitchen Remodel",
     category: "remodeling",
@@ -61,6 +50,28 @@ export const projects: ProjectData[] = [
       { before: "/projects/kitchen-2023/before-1.webp", after: "/projects/kitchen-2023/after-1.webp", label: "Main view" },
     ],
     featured: true,
+    visible: true,
+  },
+  {
+    id: "home-exterior-2024",
+    title: "Home Exterior Renovation",
+    category: "exterior",
+    description: "Full exterior renovation. Fresh stucco and paint, new roofing, modernized window trim, stone retaining wall, and new entry steps.",
+    pairs: [
+      { before: "/projects/home-exterior-2024/before-1.webp", after: "/projects/home-exterior-2024/after-1.webp", label: "Front elevation" },
+    ],
+    featured: true,
+    visible: true,
+  },
+  {
+    id: "kitchen-2025",
+    title: "Kitchen Remodel",
+    category: "remodeling",
+    description: "Full kitchen rebuild. White shaker cabinets, hardwood flooring, stainless appliances, and brushed nickel hardware.",
+    pairs: [
+      { before: "/projects/kitchen-2025/before-1.webp", after: "/projects/kitchen-2025/after-1.webp", label: "Main view" },
+    ],
+    featured: false,
     visible: true,
   },
   {
@@ -79,12 +90,13 @@ export const projects: ProjectData[] = [
     visible: true,
   },
   {
-    id: "front-porch-2024",
-    title: "Front Porch Remodel",
-    category: "exterior",
-    description: "Custom cedar post-and-beam porch with new roofing, fresh exterior paint, and concrete steps.",
+    id: "living-dining-2024",
+    title: "Living Room & Dining Remodel",
+    category: "remodeling",
+    description: "Open-concept living and dining room transformation. Wood paneling removed, fresh paint and accent wall, new hardwood flooring throughout, modern lighting.",
     pairs: [
-      { before: "/projects/front-porch-2024/before-1.webp", after: "/projects/front-porch-2024/after-1.webp", label: "Entryway" },
+      { before: "/projects/living-dining-2024/before-1.webp", after: "/projects/living-dining-2024/after-1.webp", label: "Living room" },
+      { before: "/projects/living-dining-2024/before-2.webp", after: "/projects/living-dining-2024/after-2.webp", label: "Dining area" },
     ],
     featured: false,
     visible: true,
@@ -96,14 +108,6 @@ export const projects: ProjectData[] = [
     title: "Bathroom Remodel",
     category: "remodeling",
     description: "Full bathroom renovation.",
-    pairs: [],
-    visible: false,
-  },
-  {
-    id: "living-dining-2024",
-    title: "Living Room & Dining Remodel",
-    category: "remodeling",
-    description: "Open-concept living and dining room transformation.",
     pairs: [],
     visible: false,
   },
