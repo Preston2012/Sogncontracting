@@ -1,6 +1,6 @@
 // config/projects.ts
 // Gallery project data. visible: true = real photos. visible: false = branded placeholder.
-// Updated 2026-04-29: Drop 2 - living/dining live, exterior renamed and live, kitchen-2025 swap fix.
+// Updated 2026-04-30: removed bathroom-2024, custom-concrete-2023, plumbing-electrical-2023 placeholders pending photos.
 
 export interface PhotoPair {
   before: string;
@@ -11,7 +11,7 @@ export interface PhotoPair {
 export interface ProjectData {
   id: string;
   title: string;
-  category: "remodeling" | "exterior" | "commercial" | "concrete";
+  category: "remodeling" | "exterior";
   description: string;
   pairs: PhotoPair[];
   extras?: string[];
@@ -23,8 +23,6 @@ export const categories = [
   { id: "all", label: "All" },
   { id: "remodeling", label: "Remodeling" },
   { id: "exterior", label: "Exterior" },
-  { id: "commercial", label: "Commercial" },
-  { id: "concrete", label: "Concrete" },
 ] as const;
 
 export type CategoryId = (typeof categories)[number]["id"];
@@ -100,31 +98,5 @@ export const projects: ProjectData[] = [
     ],
     featured: false,
     visible: true,
-  },
-
-  // ---- Awaiting photos from Paul (resend in progress) ----
-  {
-    id: "bathroom-2024",
-    title: "Bathroom Remodel",
-    category: "remodeling",
-    description: "Full bathroom renovation.",
-    pairs: [],
-    visible: false,
-  },
-  {
-    id: "custom-concrete-2023",
-    title: "Custom Concrete Work",
-    category: "concrete",
-    description: "Custom concrete driveway and site work.",
-    pairs: [],
-    visible: false,
-  },
-  {
-    id: "plumbing-electrical-2023",
-    title: "Remodel: Plumbing & Electrical",
-    category: "remodeling",
-    description: "Full plumbing and electrical remodel.",
-    pairs: [],
-    visible: false,
   },
 ];
