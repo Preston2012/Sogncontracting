@@ -137,30 +137,4 @@ export const projects: ProjectData[] = [
     featured: false,
     visible: true,
   },
-
-  // ---- Awaiting photos from Paul (resend in progress) ----
-  {
-    id: "bathroom-2024",
-    title: "Bathroom Remodel",
-    category: "remodeling",
-    description: "Full bathroom renovation.",
-    pairs: [],
-    visible: false,
-  },
-  {
-    id: "custom-concrete-2023",
-    title: "Custom Concrete Work",
-    category: "concrete",
-    description: "Custom concrete driveway and site work.",
-    pairs: [],
-    visible: false,
-  },
-  {
-    id: "plumbing-electrical-2023",
-    title: "Remodel: Plumbing & Electrical",
-    category: "remodeling",
-    description: "Full plumbing and electrical remodel.",
-    pairs: [],
-    visible: false,
-  },
 ];
