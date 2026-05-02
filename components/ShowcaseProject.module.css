@@ -1,0 +1,128 @@
+.showcase {
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-card);
+  background: var(--white);
+  padding: var(--space-lg);
+  margin-bottom: var(--space-lg);
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-md);
+}
+
+.categoryBadge {
+  align-self: flex-start;
+  font-size: var(--text-caption);
+  font-weight: var(--weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 2px var(--space-sm);
+  border-radius: var(--radius-badge);
+  background-color: var(--green-badge-bg);
+  color: var(--green-badge-text);
+  white-space: nowrap;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: var(--text-h2);
+  color: var(--charcoal);
+}
+
+.description {
+  font-size: var(--text-body);
+  color: var(--text-secondary);
+  margin: 0;
+  max-width: 70ch;
+}
+
+.heroPair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  background: var(--border-light);
+  border: 0;
+  padding: 0;
+  width: 100%;
+  cursor: pointer;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  transition: outline-color 0.2s ease;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.heroPair:hover,
+.heroPair:focus-visible {
+  outline-color: var(--sogn-green);
+}
+
+.heroItem {
+  position: relative;
+  overflow: hidden;
+}
+
+.badge {
+  position: absolute;
+  top: var(--space-sm);
+  left: var(--space-sm);
+  z-index: 2;
+  font-size: var(--text-caption);
+  font-weight: var(--weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 2px var(--space-sm);
+  border-radius: var(--radius-badge);
+  background-color: var(--charcoal);
+  color: var(--white);
+}
+
+.badgeAfter {
+  background-color: var(--green-badge-bg);
+  color: var(--green-badge-text);
+}
+
+.heroImg {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+.progressSection {
+  margin-top: var(--space-lg);
+}
+
+.progressTitle {
+  font-family: var(--font-heading);
+  font-size: var(--text-h3);
+  color: var(--charcoal);
+  margin-bottom: var(--space-sm);
+}
+
+.progressGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: var(--space-sm);
+}
+
+.progressImg {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  border-radius: var(--radius-badge);
+  border: 1px solid var(--border-light);
+}
+
+@media (max-width: 479px) {
+  .heroPair {
+    grid-template-columns: 1fr;
+  }
+  .progressGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
