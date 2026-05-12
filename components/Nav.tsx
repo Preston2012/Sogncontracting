@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { site } from "@/config/site";
 import styles from "./Nav.module.css";
 
@@ -36,13 +37,13 @@ export function Nav(): JSX.Element {
       <div className={`container ${styles.inner}`}>
         {/* Logo / Home link */}
         <a href="/" className={styles.logo} aria-label="Sogn Contracting home">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src="/logo-mark.png"
             alt=""
             className={styles.logoImg}
             width={100}
             height={50}
+            priority
           />
           <span className={styles.logoText}>Sogn Contracting</span>
         </a>

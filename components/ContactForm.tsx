@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 import { useState, FormEvent } from "react";
 import { useReveal } from "@/hooks/useReveal";
 import { site } from "@/config/site";
@@ -80,13 +82,13 @@ export function ContactForm(): JSX.Element {
       <div className={`container ${styles.inner} ${visible ? styles.visible : ""}`}>
         {/* Real logo image */}
         <div className={styles.logoWrap} aria-hidden="true">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src="/logo-full.png"
             alt=""
             className={styles.logoImg}
             width={280}
             height={130}
+            sizes="(max-width: 480px) 240px, 280px"
           />
         </div>
 

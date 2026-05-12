@@ -27,6 +27,9 @@ export const metadata: Metadata = {
     template: "%s | Sogn Contracting LLC",
   },
   description: site.meta.home.description,
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     siteName: site.name,
     type: "website",

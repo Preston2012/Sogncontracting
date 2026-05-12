@@ -1,6 +1,7 @@
 "use client";
 
 import { useReveal } from "@/hooks/useReveal";
+import Image from "next/image";
 import { Button } from "@/components/Button";
 import { RooflineMotif } from "@/components/RooflineMotif";
 import styles from "./Hero.module.css";
@@ -13,13 +14,14 @@ export function Hero(): JSX.Element {
       <RooflineMotif opacity={0.035} />
       <div className={`container ${styles.inner} ${visible ? styles.visible : ""}`}>
         <div className={styles.logoWrap}>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src="/logo-full.png"
             alt="Sogn Contracting LLC logo"
             className={styles.logo}
             width={360}
             height={166}
+            priority
+            sizes="(max-width: 480px) 280px, 360px"
           />
         </div>
 

@@ -8,6 +8,9 @@ import styles from "./page.module.css";
 export const metadata: Metadata = {
   title: site.meta.services.title,
   description: site.meta.services.description,
+  alternates: {
+    canonical: "/services/",
+  },
 };
 
 export default function ServicesPage(): JSX.Element {

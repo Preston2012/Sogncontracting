@@ -1,7 +1,7 @@
 export const site = {
   name: "Sogn Contracting LLC",
   tagline: "Building You A Better Home",
-  url: "https://sogncontracting.com",
+  url: "https://www.sogncontracting.com",
   owner: "Paul Sogn",
   founded: "1995",
   yearsInBusiness: "30+",
@@ -58,7 +58,7 @@ export const site = {
     name: "Sogn Contracting LLC",
     description:
       "Licensed general contractor serving Bandon and the Southern Oregon Coast since 1995. Residential and commercial construction.",
-    url: "https://sogncontracting.com",
+    url: "https://www.sogncontracting.com",
     telephone: "+16029040741",
     email: "sogncontracting@gmail.com",
     address: {

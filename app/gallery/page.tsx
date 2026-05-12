@@ -6,6 +6,9 @@ import styles from "./page.module.css";
 export const metadata: Metadata = {
   title: site.meta.gallery.title,
   description: site.meta.gallery.description,
+  alternates: {
+    canonical: "/gallery/",
+  },
 };
 
 export default function GalleryPage(): JSX.Element {
