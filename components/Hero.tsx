@@ -1,18 +1,18 @@
-"use client";
-
-import { useReveal } from "@/hooks/useReveal";
 import Image from "next/image";
 import { Button } from "@/components/Button";
 import { RooflineMotif } from "@/components/RooflineMotif";
 import styles from "./Hero.module.css";
 
+// Hero is server-rendered and visible immediately. The previous
+// useReveal opacity-fade-in delayed LCP to ~3s on mobile because the
+// hero contents started at opacity:0 and waited for an
+// IntersectionObserver to fire. Above-the-fold heroes should paint
+// on first paint, period. Reveal animations belong below the fold.
 export function Hero(): JSX.Element {
-  const { ref, visible } = useReveal(0.1);
-
   return (
-    <section className={styles.hero} ref={ref}>
+    <section className={styles.hero}>
       <RooflineMotif opacity={0.035} />
-      <div className={`container ${styles.inner} ${visible ? styles.visible : ""}`}>
+      <div className={`container ${styles.inner} ${styles.visible}`}>
         <div className={styles.logoWrap}>
           <Image
             src="/logo-full.png"
