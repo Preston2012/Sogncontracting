@@ -100,17 +100,6 @@ export const projects: ProjectData[] = [
     visible: true,
   },
   {
-    id: "kitchen-2025",
-    title: "Kitchen Remodel",
-    category: "remodeling",
-    description: "Full kitchen rebuild. White shaker cabinets, hardwood flooring, stainless appliances, and brushed nickel hardware.",
-    pairs: [
-      { before: "/projects/kitchen-2025/before-1.webp", after: "/projects/kitchen-2025/after-1.webp", label: "Main view" },
-    ],
-    featured: false,
-    visible: true,
-  },
-  {
     id: "master-bath-2023",
     title: "Master Bathroom Remodel",
     category: "remodeling",
