@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useReveal } from "@/hooks/useReveal";
 import { projects } from "@/config/projects";
 import { PlaceholderImage } from "@/components/PlaceholderImage";
@@ -27,21 +28,25 @@ export function FeaturedProjects(): JSX.Element {
                   <div className={styles.pair}>
                     <div className={styles.imgContainer}>
                       <span className={styles.badge}>Before</span>
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
+                      <Image
                         src={project.pairs[0].before}
                         alt={`${project.title} before photo`}
                         className={styles.img}
+                        width={800}
+                        height={600}
+                        sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 200px"
                         loading="lazy"
                       />
                     </div>
                     <div className={styles.imgContainer}>
                       <span className={`${styles.badge} ${styles.badgeAfter}`}>After</span>
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
+                      <Image
                         src={project.pairs[0].after}
                         alt={`${project.title} after photo`}
                         className={styles.img}
+                        width={800}
+                        height={600}
+                        sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 200px"
                         loading="lazy"
                       />
                     </div>
