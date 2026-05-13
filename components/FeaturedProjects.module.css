@@ -123,7 +123,7 @@
   gap: var(--space-xs);
   font-size: var(--text-body);
   font-weight: var(--weight-semibold);
-  color: var(--sogn-green);
+  color: var(--sogn-green-on-dark);
   text-decoration: none;
   transition: gap 0.2s ease;
 }

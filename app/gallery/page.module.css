@@ -52,7 +52,7 @@
 }
 
 .inProgressLink {
-  color: var(--sogn-green);
+  color: var(--sogn-green-text);
   font-weight: var(--weight-semibold);
 }
 

@@ -21,10 +21,10 @@
   transform: scale(0.98);
 }
 
-/* Primary: green filled, white text */
+/* Primary: green filled, charcoal text (WCAG AA) */
 .primary {
   background-color: var(--sogn-green);
-  color: var(--white);
+  color: var(--charcoal);
   border: 2px solid var(--sogn-green);
 }
 

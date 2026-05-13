@@ -81,7 +81,7 @@ ol {
   --text-primary: #2D2D2D;
   --text-secondary: #757575;
   --text-on-dark: #FFFFFF;
-  --text-on-dark-sub: #BDBDBD;
+  --text-on-dark-sub: #D0D0D0;       /* WCAG AA: 5.07 on #525252 card, 6.93 on #3E3E3E alt, 8.19 on #333333 footer */
 
   /* Borders */
   --border-light: #E0E0E0;
@@ -89,9 +89,11 @@ ol {
   --border-dark: #5C5C5C;
 
   /* Accents */
-  --green-hover: #5F9A1F;
+  --green-hover: #7BBA29;       /* WCAG AA: 5.84 with #2D2D2D text (lifted brighter for hover affordance) */
   --green-badge-bg: #72B725;
-  --green-badge-text: #FFFFFF;
+  --green-badge-text: #2D2D2D;       /* WCAG AA: 5.58 on #72B725 (was white at 2.47) */
+  --sogn-green-text: #477B14;       /* WCAG AA dark-on-light: 5.11 on white, 4.69 on #F5F5F5 */
+  --sogn-green-on-dark: #95DA35;     /* WCAG AA text-only variant: 5.38 on #484848, 6.29 on #3E3E3E */
 
   /* Radii */
   --radius-card: 6px;

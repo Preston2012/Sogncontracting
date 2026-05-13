@@ -33,7 +33,7 @@
 }
 
 .verse {
-  color: var(--sogn-green);
+  color: var(--sogn-green-on-dark);
   font-weight: var(--weight-semibold);
   font-style: normal;
 }
@@ -53,7 +53,7 @@
 }
 
 .contactLink:hover {
-  color: var(--sogn-green);
+  color: var(--sogn-green-on-dark);
 }
 
 .address {
@@ -101,7 +101,7 @@
 .ccb {
   font-size: var(--text-caption);
   font-weight: var(--weight-semibold);
-  color: var(--sogn-green);
+  color: var(--sogn-green-on-dark);
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }

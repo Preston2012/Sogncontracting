@@ -27,17 +27,17 @@
 
 .chip:hover {
   border-color: var(--sogn-green);
-  color: var(--sogn-green);
+  color: var(--sogn-green-text);
 }
 
 .active {
   background-color: var(--sogn-green);
-  color: var(--white);
+  color: var(--charcoal);
   border-color: var(--sogn-green);
 }
 
 .active:hover {
   background-color: var(--green-hover);
   border-color: var(--green-hover);
-  color: var(--white);
+  color: var(--charcoal);
 }

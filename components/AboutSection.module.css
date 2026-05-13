@@ -71,12 +71,12 @@
 .statBadge {
   font-size: var(--text-h3);
   font-weight: var(--weight-bold);
-  color: var(--sogn-green);
+  color: var(--sogn-green-text);
 }
 
 .statCheck {
   font-size: var(--text-h1);
-  color: var(--sogn-green);
+  color: var(--sogn-green-text);
   line-height: 1;
 }
 
