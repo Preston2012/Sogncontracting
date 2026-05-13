@@ -62,7 +62,7 @@ export const services: ServiceData[] = [
     id: "custom-homes",
     title: "Custom Home Builds",
     description:
-      "Crafting new homes tailored to your vision. From foundation to finish, we build with quality materials and attention to every detail.",
+      "New homes built to your spec. Foundation through finish, with quality materials and attention to every detail.",
     icon: "custom-home",
     scopeTitle: "What You Get",
     scopeItems: [
@@ -158,7 +158,7 @@ export const services: ServiceData[] = [
     id: "repairs",
     title: "Repairs & Maintenance",
     description:
-      "Dependable solutions for all your property repair needs. No job too small when it comes to keeping your home in top shape.",
+      "Property repairs done right the first time. No job too small when it comes to keeping your home in top shape.",
     icon: "repairs",
     scopeTitle: "Process",
     scopeItems: [
