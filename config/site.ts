@@ -31,7 +31,7 @@ export const site = {
     home: {
       title: "Sogn Contracting LLC | General Contractor in Bandon, Oregon",
       description:
-        "Licensed general contractor serving Bandon and the Southern Oregon Coast since 1995. Residential and commercial construction, remodeling, custom homes, and more. CCB# 257491.",
+        "Licensed Bandon general contractor since 1995. Residential & commercial construction, remodeling, and custom homes on the Southern Oregon Coast. CCB# 257491.",
     },
     services: {
       title: "Construction Services | Sogn Contracting LLC",
