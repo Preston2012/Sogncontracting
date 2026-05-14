@@ -52,11 +52,11 @@ function buildCsp(hashes) {
   //   browser; everything is self-hosted assets.
   const directives = [
     "default-src 'self'",
-    `script-src 'self' ${[...hashes].join(' ')}`,
+    `script-src 'self' https://static.cloudflareinsights.com ${[...hashes].join(' ')}`,
     "style-src 'self' 'unsafe-inline'",
     "img-src 'self' data: https:",
     "font-src 'self' data:",
-    "connect-src 'self'",
+    "connect-src 'self' https://cloudflareinsights.com",
     "form-action 'self'",
     "base-uri 'self'",
     "object-src 'none'",
