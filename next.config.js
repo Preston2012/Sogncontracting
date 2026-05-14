@@ -23,6 +23,21 @@ const nextConfig = {
     return config;
   },
   async headers() {
+    // Security headers (NO CSP here). CSP is injected per-page as a
+    // <meta http-equiv="content-security-policy"> tag by scripts/csp-postprocess.mjs
+    // because each prerendered page has different inline Next.js flight-data
+    // scripts whose SHA-256 hashes are page-specific. Doing CSP statically here
+    // would require either 'unsafe-inline' (costs Lighthouse Best-Practices)
+    // or nonces (forces dynamic rendering, kills static caching).
+    const securityHeaders = [
+      { key: "Strict-Transport-Security", value: "max-age=15552000; includeSubDomains; preload" },
+      { key: "X-Content-Type-Options", value: "nosniff" },
+      { key: "X-Frame-Options", value: "SAMEORIGIN" },
+      { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+      { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()" },
+      { key: "Cross-Origin-Opener-Policy", value: "same-origin" },
+    ];
+
     return [
       {
         // Long-cache hashed static assets, repeat-visit performance.
@@ -30,6 +45,11 @@ const nextConfig = {
         headers: [
           { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
         ],
+      },
+      {
+        // Security headers on every page response.
+        source: "/:path*",
+        headers: securityHeaders,
       },
     ];
   },
