@@ -59,9 +59,13 @@ export function ContactForm(): JSX.Element {
     setStatus("submitting");
 
     try {
+      // Tag this submission so it's distinguishable from leads coming
+      // via the Winters Code portfolio widget (which sets source=wc-portfolio).
+      const payload = Object.fromEntries(formData);
+      payload.source = "sogn-site";
       const res = await fetch("/api/contact", {
         method: "POST",
-        body: JSON.stringify(Object.fromEntries(formData)),
+        body: JSON.stringify(payload),
         headers: { "Content-Type": "application/json" },
       });
       setStatus(res.ok ? "success" : "error");
