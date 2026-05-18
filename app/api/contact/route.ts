@@ -212,6 +212,8 @@ export async function POST(request: NextRequest) {
   let delivered = false;
   if (apiKey) {
     delivered = await sendViaResend(apiKey, from, to, replyTo, formatted);
+    // TEMP DIAGNOSTIC: log target to Vercel logs so we can verify routing
+    console.log("[diagnostic] source=" + payload.source + " target=" + to + " delivered=" + delivered);
   } else {
     console.warn("[contact] RESEND_API_KEY not set; submission logged only");
   }
@@ -230,5 +232,5 @@ export async function POST(request: NextRequest) {
     })
   );
 
-  return NextResponse.json({ ok: true, delivered }, { headers: corsHeaders(origin) });
+  return NextResponse.json({ ok: true, delivered, _diag_to: to, _diag_source: payload.source, _diag_apiKey: !!apiKey }, { headers: corsHeaders(origin) });
 }
