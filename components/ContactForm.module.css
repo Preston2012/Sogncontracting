@@ -91,11 +91,11 @@
 }
 
 .formWrap {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
   gap: var(--space-xl);
   width: 100%;
-  max-width: 640px;
+  max-width: 720px;
 }
 
 /* Form card — darker than section bg, matching mockup */
@@ -233,16 +233,36 @@
 /* Alternate contact */
 .altContact {
   display: flex;
-  flex-direction: column;
-  gap: var(--space-lg);
+  flex-direction: row;
+  gap: var(--space-xl);
   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  order: -1;
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--border-dark);
+}
+
+@media (max-width: 640px) {
+  .altContact {
+    flex-direction: column;
+    gap: var(--space-md);
+  }
 }
 
 .altItem {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--space-xs);
+  flex-direction: row;
+  align-items: baseline;
+  gap: var(--space-sm);
+}
+
+@media (max-width: 640px) {
+  .altItem {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-xs);
+  }
 }
 
 .altLabel {
@@ -265,17 +285,10 @@
   color: var(--sogn-green-on-dark);
 }
 
-@media (min-width: 768px) {
-  .formWrap {
-    grid-template-columns: 1fr auto;
-    max-width: 800px;
-    align-items: start;
-  }
-
-  .altContact {
-    padding-top: var(--space-xl);
-  }
-}
+/* 768+ override removed: formWrap is now flex column at all widths,
+   altContact stacks above the form via order:-1 (see .altContact rule).
+   Preston: 'Extend contact form and put contact details above or
+   below not off to the side.' */
 
 @media (max-width: 640px) {
   .logoImg {
