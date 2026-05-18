@@ -198,12 +198,7 @@ export async function POST(request: NextRequest) {
 
   const formatted = formatEmail(payload, ip, referer, tag);
   const apiKey = process.env.RESEND_API_KEY;
-  // TEMP TEST OVERRIDE: route WC portfolio submissions to Preston for
-  // end-to-end testing before exposing to real leads. Revert after test.
-  // See commit log for the revert commit hash.
-  const to = payload.source === "wc-portfolio"
-    ? "preston@winterscode.com"
-    : (process.env.CONTACT_FORWARD_TO || DEFAULT_TO);
+  const to = process.env.CONTACT_FORWARD_TO || DEFAULT_TO;
   const from =
     process.env.RESEND_FROM ||
     "Sogn Contracting <onboarding@resend.dev>";
@@ -212,8 +207,6 @@ export async function POST(request: NextRequest) {
   let delivered = false;
   if (apiKey) {
     delivered = await sendViaResend(apiKey, from, to, replyTo, formatted);
-    // TEMP DIAGNOSTIC: log target to Vercel logs so we can verify routing
-    console.log("[diagnostic] source=" + payload.source + " target=" + to + " delivered=" + delivered);
   } else {
     console.warn("[contact] RESEND_API_KEY not set; submission logged only");
   }
@@ -232,5 +225,5 @@ export async function POST(request: NextRequest) {
     })
   );
 
-  return NextResponse.json({ ok: true, delivered, _diag_to: to, _diag_source: payload.source, _diag_apiKey: !!apiKey }, { headers: corsHeaders(origin) });
+  return NextResponse.json({ ok: true, delivered }, { headers: corsHeaders(origin) });
 }
