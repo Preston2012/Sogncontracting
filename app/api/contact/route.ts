@@ -12,7 +12,7 @@
  *
  * Email delivery: uses Resend if RESEND_API_KEY is set, otherwise logs to
  * Vercel logs so submissions never silently disappear (current state of
- * the form was a silent 404 — fixed by this route).
+ * the form was a silent 404, fixed by this route).
  *
  * Honeypot field "website" must be empty (basic bot trap, hidden via CSS).
  *
@@ -198,7 +198,12 @@ export async function POST(request: NextRequest) {
 
   const formatted = formatEmail(payload, ip, referer, tag);
   const apiKey = process.env.RESEND_API_KEY;
-  const to = process.env.CONTACT_FORWARD_TO || DEFAULT_TO;
+  // TEMP TEST OVERRIDE: route WC portfolio submissions to Preston for
+  // end-to-end testing before exposing to real leads. Revert after test.
+  // See commit log for the revert commit hash.
+  const to = payload.source === "wc-portfolio"
+    ? "preston@winterscode.com"
+    : (process.env.CONTACT_FORWARD_TO || DEFAULT_TO);
   const from =
     process.env.RESEND_FROM ||
     "Sogn Contracting <onboarding@resend.dev>";
