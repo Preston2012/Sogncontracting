@@ -4,6 +4,10 @@ Production website for **Sogn Contracting LLC**, a licensed general contractor i
 
 **Live:** [sogncontracting.com](https://www.sogncontracting.com)
 
+<p align="center">
+  <img src="docs/screenshots/sogn-mobile-hero.jpg" alt="sogncontracting.com mobile home page screenshot" width="320" />
+</p>
+
 [![Lighthouse mobile: 90/100/100/100](https://img.shields.io/badge/Lighthouse_mobile-90%2F100%2F100%2F100-brightgreen)](https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fsogncontracting.com)
 [![Built with Next.js](https://img.shields.io/badge/Next.js-14-black?logo=next.js)](https://nextjs.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
