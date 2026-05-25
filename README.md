@@ -8,7 +8,7 @@ Production website for **Sogn Contracting LLC**, a licensed general contractor i
   <img src="docs/screenshots/sogn-mobile-hero.jpg" alt="sogncontracting.com mobile home page screenshot" width="320" />
 </p>
 
-[![Lighthouse mobile: 90/100/100/100](https://img.shields.io/badge/Lighthouse_mobile-90%2F100%2F100%2F100-brightgreen)](https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fsogncontracting.com)
+[![Lighthouse mobile: 95/100/100/100](https://img.shields.io/badge/Lighthouse_mobile-95%2F100%2F100%2F100-brightgreen)](https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fsogncontracting.com)
 [![Built with Next.js](https://img.shields.io/badge/Next.js-14-black?logo=next.js)](https://nextjs.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
@@ -19,7 +19,7 @@ Production website for **Sogn Contracting LLC**, a licensed general contractor i
 A static-rendered Next.js 14 site for a Bandon-Oregon construction company. Built to:
 
 - Show 30+ years of work without slowing anyone down
-- Pass Lighthouse 90+ on real Coos County phones (slow LTE, older Androids)
+- Pass Lighthouse 95+ on real Coos County phones (slow LTE, older Androids)
 - Stay maintainable by one person, forever
 - Cost nothing to run beyond the domain
 
@@ -43,7 +43,7 @@ Lighthouse, real device, mobile profile:
 
 | Metric | Score |
 |---|---|
-| Performance | 90 |
+| Performance | 95+ |
 | Accessibility | 100 |
 | Best Practices | 100 |
 | SEO | 100 |
