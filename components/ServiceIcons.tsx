@@ -26,7 +26,7 @@ function IconWrapper({
   );
 }
 
-/** House with hammer — General Contracting */
+/** House with hammer - General Contracting */
 export function IconContracting(props: IconProps): JSX.Element {
   return (
     <IconWrapper {...props} label="General contracting">
@@ -40,7 +40,7 @@ export function IconContracting(props: IconProps): JSX.Element {
   );
 }
 
-/** Blueprint — Custom Homes */
+/** Blueprint - Custom Homes */
 export function IconCustomHome(props: IconProps): JSX.Element {
   return (
     <IconWrapper {...props} label="Custom homes">
@@ -56,15 +56,15 @@ export function IconCustomHome(props: IconProps): JSX.Element {
   );
 }
 
-/** Wrench + gear — Renovations */
+/** Wrench + gear - Renovations */
 export function IconRenovation(props: IconProps): JSX.Element {
   return (
     <IconWrapper {...props} label="Renovations">
-      {/* Left hammer handle — bottom-left to upper-right */}
+      {/* Left hammer handle - bottom-left to upper-right */}
       <line x1="6" y1="42" x2="28" y2="12" stroke="currentColor" strokeWidth="4" strokeLinecap="round" />
       {/* Left hammer head */}
       <rect x="22" y="4" width="16" height="8" rx="2" fill="currentColor" />
-      {/* Right pick handle — bottom-right to upper-left */}
+      {/* Right pick handle - bottom-right to upper-left */}
       <line x1="42" y1="42" x2="20" y2="12" stroke="#72B725" strokeWidth="4" strokeLinecap="round" />
       {/* Right pick head */}
       <rect x="10" y="4" width="16" height="8" rx="2" fill="#72B725" />
@@ -72,7 +72,7 @@ export function IconRenovation(props: IconProps): JSX.Element {
   );
 }
 
-/** House with plus — Additions */
+/** House with plus - Additions */
 export function IconAddition(props: IconProps): JSX.Element {
   return (
     <IconWrapper {...props} label="Additions">
@@ -87,7 +87,7 @@ export function IconAddition(props: IconProps): JSX.Element {
   );
 }
 
-/** Roof with shield — Roofing */
+/** Roof with shield - Roofing */
 export function IconRoofing(props: IconProps): JSX.Element {
   return (
     <IconWrapper {...props} label="Roofing">
@@ -121,7 +121,7 @@ export function IconDeck(props: IconProps): JSX.Element {
   );
 }
 
-/** Building — Commercial */
+/** Building - Commercial */
 export function IconCommercial(props: IconProps): JSX.Element {
   return (
     <IconWrapper {...props} label="Commercial construction">
@@ -155,7 +155,7 @@ export function IconConcrete(props: IconProps): JSX.Element {
   );
 }
 
-/** Toolbox — Repairs */
+/** Toolbox - Repairs */
 export function IconRepairs(props: IconProps): JSX.Element {
   return (
     <IconWrapper {...props} label="Repairs and maintenance">
