@@ -114,12 +114,17 @@
 /* Mobile menu */
 .mobileMenu {
   position: fixed;
-  inset: 80px 0 0 0;
+  top: 80px;
+  left: 0;
+  right: 0;
   background-color: var(--white);
   z-index: 99;
   display: flex;
   flex-direction: column;
-  padding: var(--space-xl) var(--container-padding);
+  gap: var(--space-lg);
+  padding: var(--space-lg) var(--container-padding) var(--space-xl);
+  border-bottom: 1px solid var(--border-light);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.10);
   animation: fadeIn 0.2s ease-out;
 }
 
@@ -143,28 +148,14 @@
   color: var(--sogn-green-text);
 }
 
-.mobileHead {
-  margin-bottom: var(--space-xl);
-}
-
-.mobileName {
-  font-family: var(--font-heading);
-  font-size: var(--text-h3);
-  font-weight: var(--weight-bold);
-  color: var(--charcoal);
-  margin: 0;
-}
-
 .mobileVerse {
   font-size: var(--text-small);
   font-weight: var(--weight-semibold);
   color: var(--sogn-green-text);
-  margin: var(--space-xs) 0 0;
+  margin: 0;
 }
 
 .mobileContact {
-  margin-top: auto;
-  padding-top: var(--space-xl);
   display: flex;
   flex-direction: column;
   gap: var(--space-sm);
