@@ -75,6 +75,10 @@ export function Nav(): JSX.Element {
       {/* Mobile menu overlay */}
       {menuOpen && (
         <div className={styles.mobileMenu} role="dialog" aria-label="Navigation menu">
+          <div className={styles.mobileHead}>
+            <p className={styles.mobileName}>{site.name}</p>
+            <p className={styles.mobileVerse}>John 3:16</p>
+          </div>
           <ul className={styles.mobileLinks}>
             {site.nav.map((item) => (
               <li key={item.href}>
@@ -91,6 +95,9 @@ export function Nav(): JSX.Element {
           <div className={styles.mobileContact}>
             <a href={`tel:${site.contact.phoneTel}`} className={styles.mobilePhone}>
               {site.contact.phone}
+            </a>
+            <a href={`mailto:${site.contact.email}`} className={styles.mobileEmail}>
+              {site.contact.email}
             </a>
           </div>
         </div>
