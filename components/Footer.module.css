@@ -122,3 +122,17 @@
     grid-column: 1 / -1;
   }
 }
+
+
+.legalLinks {
+  display: flex;
+  gap: var(--space-md);
+}
+.legalLink {
+  font-size: var(--text-small);
+  color: var(--text-on-dark-sub);
+  text-decoration: none;
+}
+.legalLink:hover {
+  color: var(--sogn-green-on-dark);
+}

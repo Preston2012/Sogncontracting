@@ -44,6 +44,13 @@ export function Footer(): JSX.Element {
         {/* Bottom bar */}
         <div className={styles.bottom}>
           <span className={styles.ccb}>CCB# {site.credentials.ccb}</span>
+          <nav className={styles.legalLinks} aria-label="Legal">
+            {site.legal.map((item) => (
+              <a key={item.href} href={item.href} className={styles.legalLink}>
+                {item.label}
+              </a>
+            ))}
+          </nav>
           <span className={styles.copyright}>
             &copy; {year} {site.name}. All rights reserved.
           </span>

@@ -1,0 +1,47 @@
+/* Shared styles for legal pages (privacy, terms). Sogn-branded, clean. */
+.hero {
+  padding: var(--space-2xl) 0 var(--space-xl);
+  border-bottom: 1px solid var(--border-light);
+  background: var(--bg-light);
+}
+.eyebrow {
+  display: inline-block;
+  font-size: var(--text-small);
+  font-weight: var(--weight-semibold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sogn-green-text);
+  margin-bottom: var(--space-sm);
+}
+.title { font-size: var(--text-h1); margin-bottom: var(--space-sm); }
+.meta { font-size: var(--text-small); color: var(--text-secondary); }
+.body { padding: var(--space-2xl) 0; }
+.prose { max-width: 720px; margin: 0 auto; }
+.summary {
+  border-left: 3px solid var(--sogn-green);
+  background: var(--bg-light);
+  padding: var(--space-md) var(--space-lg);
+  border-radius: 0 var(--radius-card) var(--radius-card) 0;
+  margin-bottom: var(--space-xl);
+}
+.summary p { font-size: var(--text-small); color: var(--text-secondary); margin: 0; line-height: var(--leading-normal); }
+.prose h2 {
+  font-size: var(--text-h2);
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-md);
+  scroll-margin-top: var(--space-xl);
+}
+.prose h2:first-of-type { margin-top: 0; }
+.prose p { color: var(--text-primary); line-height: var(--leading-relaxed); margin-bottom: var(--space-md); }
+.prose ul { list-style: disc; padding-left: var(--space-lg); margin-bottom: var(--space-md); }
+.prose li { color: var(--text-primary); line-height: var(--leading-relaxed); margin-bottom: var(--space-xs); }
+.prose a { color: var(--sogn-green-text); text-decoration: underline; text-underline-offset: 2px; }
+.prose a:hover { color: var(--charcoal); }
+.prose strong { font-weight: var(--weight-semibold); }
+.contactBlock {
+  margin-top: var(--space-md);
+  padding: var(--space-lg);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-card);
+}
+.contactBlock p { margin-bottom: var(--space-xs); }

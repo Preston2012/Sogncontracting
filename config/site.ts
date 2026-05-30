@@ -52,6 +52,11 @@ export const site = {
     { label: "Contact", href: "/#contact" },
   ],
 
+  legal: [
+    { label: "Privacy", href: "/privacy/" },
+    { label: "Terms", href: "/terms/" },
+  ],
+
   structuredData: {
     "@context": "https://schema.org",
     "@type": "GeneralContractor",
