@@ -17,9 +17,9 @@ export function ShowcaseProject({ project }: ShowcaseProjectProps): JSX.Element 
     <section className={styles.showcase} aria-labelledby={`${project.id}-title`}>
       <header className={styles.head}>
         <span className={styles.categoryBadge}>{project.category}</span>
-        <h3 id={`${project.id}-title`} className={styles.title}>
+        <h2 id={`${project.id}-title`} className={styles.title}>
           {project.title}
-        </h3>
+        </h2>
         <p className={styles.description}>{project.description}</p>
       </header>
 
@@ -30,7 +30,7 @@ export function ShowcaseProject({ project }: ShowcaseProjectProps): JSX.Element 
         aria-label={`Open ${project.title} full gallery`}
       >
         <div className={styles.heroItem}>
-          <span className={styles.badge}>Before</span>
+          <span className={styles.badge} aria-hidden="true">Before</span>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={hero.before}
@@ -40,7 +40,7 @@ export function ShowcaseProject({ project }: ShowcaseProjectProps): JSX.Element 
           />
         </div>
         <div className={styles.heroItem}>
-          <span className={`${styles.badge} ${styles.badgeAfter}`}>After</span>
+          <span className={`${styles.badge} ${styles.badgeAfter}`} aria-hidden="true">After</span>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={hero.after}
@@ -53,7 +53,7 @@ export function ShowcaseProject({ project }: ShowcaseProjectProps): JSX.Element 
 
       {project.progress && project.progress.length > 0 && (
         <div className={styles.progressSection}>
-          <h4 className={styles.progressTitle}>Build Progress</h4>
+          <h3 className={styles.progressTitle}>Build Progress</h3>
           <div className={styles.progressGrid}>
             {project.progress.map((src, i) => (
               // eslint-disable-next-line @next/next/no-img-element
