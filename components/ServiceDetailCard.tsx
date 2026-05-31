@@ -24,7 +24,7 @@ export function ServiceDetailCard({
     >
       <div className={styles.header}>
         <ServiceIcon name={service.icon} size={48} className={styles.icon} />
-        <h3 className={styles.title}>{service.title}</h3>
+        <h2 className={styles.title}>{service.title}</h2>
       </div>
 
       <div className={styles.body}>

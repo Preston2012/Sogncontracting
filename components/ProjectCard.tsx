@@ -26,7 +26,7 @@ export function ProjectCard({
         {project.visible ? (
           <div className={styles.pair}>
             <div className={styles.imgContainer}>
-              <span className={styles.badge}>Before</span>
+              <span className={styles.badge} aria-hidden="true">Before</span>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={heroPair.before}
@@ -36,7 +36,7 @@ export function ProjectCard({
               />
             </div>
             <div className={styles.imgContainer}>
-              <span className={`${styles.badge} ${styles.badgeAfter}`}>After</span>
+              <span className={`${styles.badge} ${styles.badgeAfter}`} aria-hidden="true">After</span>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={heroPair.after}
@@ -49,19 +49,19 @@ export function ProjectCard({
         ) : (
           <div className={styles.pair}>
             <div className={styles.imgContainer}>
-              <span className={styles.badge}>Before</span>
+              <span className={styles.badge} aria-hidden="true">Before</span>
               <PlaceholderImage aspectRatio="4 / 3" label="Project photo coming soon" />
             </div>
             <div className={styles.imgContainer}>
-              <span className={`${styles.badge} ${styles.badgeAfter}`}>After</span>
+              <span className={`${styles.badge} ${styles.badgeAfter}`} aria-hidden="true">After</span>
               <PlaceholderImage aspectRatio="4 / 3" label="Project photo coming soon" />
             </div>
           </div>
         )}
       </div>
       <div className={styles.content}>
-        <span className={styles.categoryBadge}>{project.category}</span>
-        <h3 className={styles.title}>{project.title}</h3>
+        <span className={styles.categoryBadge} aria-hidden="true">{project.category}</span>
+        <h2 className={styles.title}>{project.title}</h2>
       </div>
     </button>
   );
