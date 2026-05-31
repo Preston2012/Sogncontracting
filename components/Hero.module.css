@@ -2,60 +2,50 @@
   position: relative;
   min-height: 70vh;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
+  gap: var(--space-lg);
   padding: var(--space-2xl) 0;
   overflow: hidden;
   background-color: var(--bg-hero);
   background-image:
-    radial-gradient(circle at 50% 30%, rgba(255, 255, 255, 0.6) 0%, transparent 62%);
+    radial-gradient(circle at 50% 28%, rgba(255, 255, 255, 0.6) 0%, transparent 60%);
 }
 
-.inner {
-  position: relative;
-  z-index: 1;
+.top {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: var(--space-md);
-  opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  justify-content: center;
 }
-
-.visible { opacity: 1; transform: translateY(0); }
-
-.logoWrap { margin-bottom: var(--space-xs); }
 
 .logo { width: 360px; height: auto; display: block; }
 
-/* Localized photo wash band: shows behind the tagline and subline only,
-   fading into the gray hero at top and bottom. */
+/* Full-width photo wash band (touches both edges, no viewport-width trick).
+   Fades into the gray hero at top and bottom. */
 .band {
   position: relative;
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  display: flex;
-  justify-content: center;
-  padding: var(--space-xl) var(--container-padding);
+  width: 100%;
+  padding: var(--space-xl) 0;
   background-image:
-    linear-gradient(to bottom, var(--bg-hero) 0%, rgba(212, 214, 216, 0) 24%, rgba(212, 214, 216, 0) 76%, var(--bg-hero) 100%),
-    linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.46)),
+    linear-gradient(to bottom, var(--bg-hero) 0%, rgba(212, 214, 216, 0) 20%, rgba(212, 214, 216, 0) 80%, var(--bg-hero) 100%),
+    linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.48)),
     url("/bandon-beach.webp");
-  background-size: cover, cover, cover;
-  background-position: center, center, center 62%;
+  background-size: cover;
+  background-position: center, center, center 55%;
   background-repeat: no-repeat;
 }
 
-.bandText {
+/* Soft light scrim behind the text so it reads over the photo. */
+.bandInner {
   position: relative;
-  z-index: 1;
-  max-width: 600px;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: var(--space-lg);
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: var(--space-md);
   text-align: center;
+  background: radial-gradient(ellipse 82% 94% at 50% 50%, rgba(255, 255, 255, 0.62) 0%, rgba(255, 255, 255, 0.34) 48%, rgba(255, 255, 255, 0) 75%);
 }
 
 .tagline {
@@ -64,33 +54,30 @@
   font-weight: var(--weight-bold);
   color: var(--text-primary);
   line-height: var(--leading-tight);
+  max-width: 600px;
   text-wrap: balance;
 }
 
 .subline {
   font-size: var(--text-body);
-  color: var(--text-secondary);
-  max-width: 520px;
+  color: #333333;
+  max-width: 540px;
   margin: 0 auto;
   line-height: var(--leading-normal);
 }
 
-.ctas {
+.bottom {
   display: flex;
   gap: var(--space-md);
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: var(--space-sm);
 }
 
 @media (max-width: 640px) {
-  .hero { min-height: 60vh; padding: var(--space-xl) 0; }
+  .hero { min-height: 60vh; padding: var(--space-xl) 0; gap: var(--space-md); }
   .logo { width: 280px; }
-  .band { padding: var(--space-lg) var(--space-md); }
-  .ctas { flex-direction: column; width: 100%; padding: 0 var(--space-lg); }
-  .ctas > * { width: 100%; text-align: center; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .inner { opacity: 1; transform: none; transition: none; }
+  .band { padding: var(--space-lg) 0; }
+  .bandInner { padding: var(--space-md); }
+  .bottom { flex-direction: column; align-items: stretch; }
+  .bottom > * { width: 100%; text-align: center; }
 }
