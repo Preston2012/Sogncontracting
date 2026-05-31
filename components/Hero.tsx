@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { Button } from "@/components/Button";
-import { RooflineMotif } from "@/components/RooflineMotif";
 import styles from "./Hero.module.css";
 
 // Hero is server-rendered and visible immediately. The previous
@@ -11,7 +10,6 @@ import styles from "./Hero.module.css";
 export function Hero(): JSX.Element {
   return (
     <section className={styles.hero}>
-      <RooflineMotif opacity={0.035} />
       <div className={`container ${styles.inner} ${styles.visible}`}>
         <div className={styles.logoWrap}>
           <Image
@@ -35,7 +33,7 @@ export function Hero(): JSX.Element {
           <Button href="/#contact" variant="primary">
             Get a Free Estimate
           </Button>
-          <Button href="/gallery/" variant="secondaryLight">
+          <Button href="/gallery/" variant="secondary">
             View Our Work
           </Button>
         </div>

@@ -1,5 +1,5 @@
 /* ============================================
-   Sogn Contracting — Global Styles & Tokens
+   Sogn Contracting: Global Styles & Tokens
    ============================================ */
 
 /* --- Reset --- */
@@ -21,7 +21,7 @@ body {
   font-size: var(--text-body);
   line-height: var(--leading-normal);
   color: var(--text-primary);
-  background-color: var(--white);
+  background-color: var(--bg-base);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -69,6 +69,9 @@ ol {
   --charcoal: #2D2D2D;
   --sogn-green: #72B725;
   --white: #FFFFFF;
+  --bg-hero: #D4D6D8;
+  --bg-base: #EAEBEC;
+  --bg-alt: #DEDFE1;
 
   /* Surfaces */
   --bg-light: #F5F5F5;
@@ -79,7 +82,7 @@ ol {
 
   /* Text */
   --text-primary: #2D2D2D;
-  --text-secondary: #757575;
+  --text-secondary: #555555;
   --text-on-dark: #FFFFFF;
   --text-on-dark-sub: #D0D0D0;       /* WCAG AA: 5.07 on #525252 card, 6.93 on #3E3E3E alt, 8.19 on #333333 footer */
 
@@ -92,7 +95,7 @@ ol {
   --green-hover: #7BBA29;       /* WCAG AA: 5.84 with #2D2D2D text (lifted brighter for hover affordance) */
   --green-badge-bg: #72B725;
   --green-badge-text: #2D2D2D;       /* WCAG AA: 5.58 on #72B725 (was white at 2.47) */
-  --sogn-green-text: #477B14;       /* WCAG AA dark-on-light: 5.11 on white, 4.69 on #F5F5F5 */
+  --sogn-green-text: #3C6712;       /* AA on gray: ~4.95 on #DEDFE1, ~5.57 on #EAEBEC */
   --sogn-green-on-dark: #95DA35;     /* WCAG AA text-only variant: 5.38 on #484848, 6.29 on #3E3E3E */
 
   /* Radii */

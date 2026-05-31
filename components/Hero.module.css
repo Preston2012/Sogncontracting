@@ -6,9 +6,9 @@
   justify-content: center;
   padding: var(--space-2xl) 0;
   overflow: hidden;
-  background-color: var(--bg-dark);
+  background-color: var(--bg-hero);
   background-image:
-    radial-gradient(circle at 50% 30%, rgba(255,255,255,0.06) 0%, transparent 60%);
+    radial-gradient(circle at 50% 30%, rgba(255, 255, 255, 0.6) 0%, transparent 62%);
 }
 
 .inner {
@@ -31,7 +31,6 @@
 
 .logoWrap {
   margin-bottom: var(--space-md);
-  
 }
 
 .logo {
@@ -44,7 +43,7 @@
   font-family: var(--font-heading);
   font-size: var(--text-hero);
   font-weight: var(--weight-bold);
-  color: var(--white);
+  color: var(--text-primary);
   line-height: var(--leading-tight);
   max-width: 600px;
   text-wrap: balance;
@@ -52,7 +51,7 @@
 
 .subline {
   font-size: var(--text-body);
-  color: var(--text-on-dark-sub);
+  color: var(--text-secondary);
   max-width: 520px;
   line-height: var(--leading-normal);
   margin: 0;
@@ -67,31 +66,12 @@
 }
 
 @media (max-width: 640px) {
-  .hero {
-    min-height: 60vh;
-    padding: var(--space-xl) 0;
-  }
-
-  .logo {
-    width: 280px;
-  }
-
-  .ctas {
-    flex-direction: column;
-    width: 100%;
-    padding: 0 var(--space-lg);
-  }
-
-  .ctas > * {
-    width: 100%;
-    text-align: center;
-  }
+  .hero { min-height: 60vh; padding: var(--space-xl) 0; }
+  .logo { width: 280px; }
+  .ctas { flex-direction: column; width: 100%; padding: 0 var(--space-lg); }
+  .ctas > * { width: 100%; text-align: center; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .inner {
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
+  .inner { opacity: 1; transform: none; transition: none; }
 }
