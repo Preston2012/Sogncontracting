@@ -37,7 +37,7 @@ export function ShowcaseProject({ project, priority = false }: ShowcaseProjectPr
             src={hero.before}
             alt={`${project.title} before photo, Bandon Oregon`}
             className={styles.heroImg}
-            loading="eager"
+            loading={priority ? "eager" : "lazy"}
             fetchPriority={priority ? "high" : "auto"}
           />
         </div>
@@ -48,7 +48,7 @@ export function ShowcaseProject({ project, priority = false }: ShowcaseProjectPr
             src={hero.after}
             alt={`${project.title} after photo, Bandon Oregon`}
             className={styles.heroImg}
-            loading="eager"
+            loading={priority ? "eager" : "lazy"}
             fetchPriority={priority ? "high" : "auto"}
           />
         </div>
