@@ -3,6 +3,11 @@ const path = require("path");
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   trailingSlash: true,
+  images: {
+    formats: ["image/avif", "image/webp"],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920],
+    minimumCacheTTL: 31536000,
+  },
   experimental: {
     // Inline critical CSS via critters. Eliminates render-blocking on
     // small per-page CSS chunks (PSI flagged ~350ms wasted on three
@@ -42,6 +47,14 @@ const nextConfig = {
       {
         // Long-cache hashed static assets, repeat-visit performance.
         source: "/_next/static/:path*",
+        headers: [
+          { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
+        ],
+      },
+      {
+        // Cache the optimized-image endpoint at the edge so cache-cold image
+        // fetches stop re-running optimization on the LCP tail.
+        source: "/_next/image",
         headers: [
           { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
         ],
