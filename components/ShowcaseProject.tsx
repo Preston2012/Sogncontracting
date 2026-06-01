@@ -7,9 +7,10 @@ import type { ProjectData } from "@/config/projects";
 
 interface ShowcaseProjectProps {
   project: ProjectData;
+  priority?: boolean;
 }
 
-export function ShowcaseProject({ project }: ShowcaseProjectProps): JSX.Element {
+export function ShowcaseProject({ project, priority = false }: ShowcaseProjectProps): JSX.Element {
   const [modalOpen, setModalOpen] = useState(false);
   const hero = project.pairs[0];
 
@@ -37,6 +38,7 @@ export function ShowcaseProject({ project }: ShowcaseProjectProps): JSX.Element 
             alt={`${project.title} before photo, Bandon Oregon`}
             className={styles.heroImg}
             loading="eager"
+            fetchPriority={priority ? "high" : "auto"}
           />
         </div>
         <div className={styles.heroItem}>
@@ -47,6 +49,7 @@ export function ShowcaseProject({ project }: ShowcaseProjectProps): JSX.Element 
             alt={`${project.title} after photo, Bandon Oregon`}
             className={styles.heroImg}
             loading="eager"
+            fetchPriority={priority ? "high" : "auto"}
           />
         </div>
       </button>

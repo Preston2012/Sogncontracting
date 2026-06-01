@@ -50,8 +50,8 @@ export function GalleryContent(): JSX.Element {
       {showcaseProjects.length > 0 && (
         <section className={styles.showcaseSection}>
           <div className="container">
-            {showcaseProjects.map((project) => (
-              <ShowcaseProject key={project.id} project={project} />
+            {showcaseProjects.map((project, i) => (
+              <ShowcaseProject key={project.id} project={project} priority={i === 0} />
             ))}
           </div>
         </section>
