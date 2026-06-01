@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import { ProjectGalleryModal } from "@/components/ProjectGalleryModal";
 import styles from "./ShowcaseProject.module.css";
@@ -9,6 +10,9 @@ interface ShowcaseProjectProps {
   project: ProjectData;
   priority?: boolean;
 }
+
+const HERO_SIZES = "(max-width: 479px) 92vw, (max-width: 1080px) 48vw, 520px";
+const PROGRESS_SIZES = "(max-width: 479px) 46vw, 220px";
 
 export function ShowcaseProject({ project, priority = false }: ShowcaseProjectProps): JSX.Element {
   const [modalOpen, setModalOpen] = useState(false);
@@ -32,24 +36,26 @@ export function ShowcaseProject({ project, priority = false }: ShowcaseProjectPr
       >
         <div className={styles.heroItem}>
           <span className={styles.badge} aria-hidden="true">Before</span>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src={hero.before}
             alt={`${project.title} before photo, Bandon Oregon`}
             className={styles.heroImg}
-            loading={priority ? "eager" : "lazy"}
-            fetchPriority={priority ? "high" : "auto"}
+            width={1000}
+            height={750}
+            sizes={HERO_SIZES}
+            priority={priority}
           />
         </div>
         <div className={styles.heroItem}>
           <span className={`${styles.badge} ${styles.badgeAfter}`} aria-hidden="true">After</span>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src={hero.after}
             alt={`${project.title} after photo, Bandon Oregon`}
             className={styles.heroImg}
-            loading={priority ? "eager" : "lazy"}
-            fetchPriority={priority ? "high" : "auto"}
+            width={1000}
+            height={750}
+            sizes={HERO_SIZES}
+            priority={priority}
           />
         </div>
       </button>
@@ -59,12 +65,14 @@ export function ShowcaseProject({ project, priority = false }: ShowcaseProjectPr
           <h3 className={styles.progressTitle}>Build Progress</h3>
           <div className={styles.progressGrid}>
             {project.progress.map((src, i) => (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
+              <Image
                 key={src}
                 src={src}
                 alt={`${project.title} build progress step ${i + 1}, Bandon Oregon`}
                 className={styles.progressImg}
+                width={600}
+                height={450}
+                sizes={PROGRESS_SIZES}
                 loading="lazy"
               />
             ))}

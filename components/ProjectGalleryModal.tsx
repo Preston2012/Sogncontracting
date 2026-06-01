@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useRef, useCallback } from "react";
 import { PlaceholderImage } from "@/components/PlaceholderImage";
 import styles from "./ProjectGalleryModal.module.css";
@@ -9,6 +10,9 @@ interface ProjectGalleryModalProps {
   project: ProjectData;
   onClose: () => void;
 }
+
+const PAIR_SIZES = "(max-width: 639px) 92vw, 430px";
+const EXTRA_SIZES = "(max-width: 639px) 46vw, 200px";
 
 export function ProjectGalleryModal({
   project,
@@ -23,15 +27,12 @@ export function ProjectGalleryModal({
         onClose();
         return;
       }
-
-      // Focus trap
       if (e.key === "Tab" && modalRef.current) {
         const focusable = modalRef.current.querySelectorAll<HTMLElement>(
           'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
         );
         const first = focusable[0];
         const last = focusable[focusable.length - 1];
-
         if (e.shiftKey && document.activeElement === first) {
           e.preventDefault();
           last.focus();
@@ -48,7 +49,6 @@ export function ProjectGalleryModal({
     document.addEventListener("keydown", handleKeyDown);
     document.body.style.overflow = "hidden";
     closeRef.current?.focus();
-
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
       document.body.style.overflow = "";
@@ -71,7 +71,6 @@ export function ProjectGalleryModal({
       ref={modalRef}
     >
       <div className={styles.modal}>
-        {/* Header */}
         <div className={styles.header}>
           <div>
             <h2 className={styles.title}>{project.title}</h2>
@@ -90,7 +89,6 @@ export function ProjectGalleryModal({
           </button>
         </div>
 
-        {/* Pairs */}
         <div className={styles.pairs}>
           {project.pairs.map((pair, i) => (
             <div key={i} className={styles.pairSection}>
@@ -101,11 +99,13 @@ export function ProjectGalleryModal({
                 <div className={styles.pairItem}>
                   <span className={styles.badge}>Before</span>
                   {project.visible ? (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
+                    <Image
                       src={pair.before}
                       alt={`${project.title} before, ${pair.label || `angle ${i + 1}`}`}
                       className={styles.img}
+                      width={1000}
+                      height={750}
+                      sizes={PAIR_SIZES}
                       loading={i === 0 ? "eager" : "lazy"}
                     />
                   ) : (
@@ -115,11 +115,13 @@ export function ProjectGalleryModal({
                 <div className={styles.pairItem}>
                   <span className={`${styles.badge} ${styles.badgeAfter}`}>After</span>
                   {project.visible ? (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
+                    <Image
                       src={pair.after}
                       alt={`${project.title} after, ${pair.label || `angle ${i + 1}`}`}
                       className={styles.img}
+                      width={1000}
+                      height={750}
+                      sizes={PAIR_SIZES}
                       loading={i === 0 ? "eager" : "lazy"}
                     />
                   ) : (
@@ -131,18 +133,19 @@ export function ProjectGalleryModal({
           ))}
         </div>
 
-        {/* Extras (after-only beauty shots) */}
         {project.extras && project.extras.length > 0 && project.visible && (
           <div className={styles.extras}>
             <span className={styles.extrasLabel}>Additional Photos</span>
             <div className={styles.extrasGrid}>
               {project.extras.map((src, i) => (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
+                <Image
                   key={i}
                   src={src}
                   alt={`${project.title} detail photo ${i + 1}`}
                   className={styles.img}
+                  width={600}
+                  height={450}
+                  sizes={EXTRA_SIZES}
                   loading="lazy"
                 />
               ))}

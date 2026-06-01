@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { PlaceholderImage } from "@/components/PlaceholderImage";
 import styles from "./ProjectCard.module.css";
 import type { ProjectData } from "@/config/projects";
@@ -7,6 +8,8 @@ interface ProjectCardProps {
   onClick: () => void;
   delay?: number;
 }
+
+const CARD_SIZES = "(max-width: 479px) 92vw, (max-width: 639px) 46vw, (max-width: 1024px) 23vw, 250px";
 
 export function ProjectCard({
   project,
@@ -27,21 +30,25 @@ export function ProjectCard({
           <div className={styles.pair}>
             <div className={styles.imgContainer}>
               <span className={styles.badge} aria-hidden="true">Before</span>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+              <Image
                 src={heroPair.before}
                 alt={`${project.title} before photo, Bandon Oregon`}
                 className={styles.img}
+                width={800}
+                height={600}
+                sizes={CARD_SIZES}
                 loading="lazy"
               />
             </div>
             <div className={styles.imgContainer}>
               <span className={`${styles.badge} ${styles.badgeAfter}`} aria-hidden="true">After</span>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+              <Image
                 src={heroPair.after}
                 alt={`${project.title} after photo, Bandon Oregon`}
                 className={styles.img}
+                width={800}
+                height={600}
+                sizes={CARD_SIZES}
                 loading="lazy"
               />
             </div>
