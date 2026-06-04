@@ -20,14 +20,16 @@ export function Lightbox({ images, index, onClose, onNavigate }: LightboxProps):
 
   const count = images.length;
   const current = images[index];
+  const hasPrev = index > 0;
+  const hasNext = index < count - 1;
 
   const goNext = useCallback(() => {
-    if (count > 1) onNavigate((index + 1) % count);
+    if (index < count - 1) onNavigate(index + 1);
   }, [count, index, onNavigate]);
 
   const goPrev = useCallback(() => {
-    if (count > 1) onNavigate((index - 1 + count) % count);
-  }, [count, index, onNavigate]);
+    if (index > 0) onNavigate(index - 1);
+  }, [index, onNavigate]);
 
   const handleKeyDown = useCallback(
     (e: KeyboardEvent) => {
@@ -130,7 +132,7 @@ export function Lightbox({ images, index, onClose, onNavigate }: LightboxProps):
         </svg>
       </button>
 
-      {count > 1 && (
+      {hasPrev && (
         <button
           type="button"
           className={`${styles.nav} ${styles.prev}`}
@@ -161,7 +163,7 @@ export function Lightbox({ images, index, onClose, onNavigate }: LightboxProps):
         </figcaption>
       </figure>
 
-      {count > 1 && (
+      {hasNext && (
         <button
           type="button"
           className={`${styles.nav} ${styles.next}`}
