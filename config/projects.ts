@@ -127,3 +127,27 @@ export const projects: ProjectData[] = [
     visible: true,
   },
 ];
+
+export interface LightboxImage {
+  src: string;
+  caption?: string;
+}
+
+export function projectImages(project: ProjectData): LightboxImage[] {
+  const out: LightboxImage[] = [];
+  for (const pair of project.pairs) {
+    out.push({ src: pair.before, caption: pair.label ? `Before, ${pair.label}` : "Before" });
+    out.push({ src: pair.after, caption: pair.label ? `After, ${pair.label}` : "After" });
+  }
+  if (project.extras) {
+    for (const src of project.extras) {
+      out.push({ src, caption: "Detail" });
+    }
+  }
+  if (project.progress) {
+    for (const src of project.progress) {
+      out.push({ src, caption: "During the build" });
+    }
+  }
+  return out;
+}

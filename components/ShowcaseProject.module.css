@@ -44,25 +44,28 @@
   grid-template-columns: 1fr 1fr;
   gap: 2px;
   background: var(--border-light);
-  border: 0;
-  padding: 0;
   width: 100%;
-  cursor: pointer;
   border-radius: var(--radius-card);
   overflow: hidden;
-  transition: outline-color 0.2s ease;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-}
-
-.heroPair:hover,
-.heroPair:focus-visible {
-  outline-color: var(--sogn-green);
 }
 
 .heroItem {
   position: relative;
+  display: block;
+  width: 100%;
   overflow: hidden;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+}
+
+.heroItem:focus-visible {
+  outline: 2px solid var(--sogn-green);
+  outline-offset: -2px;
 }
 
 .badge {
@@ -108,6 +111,22 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: var(--space-sm);
+}
+
+.progressButton {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  border-radius: var(--radius-badge);
+}
+
+.progressButton:focus-visible {
+  outline: 2px solid var(--sogn-green);
+  outline-offset: 2px;
 }
 
 .progressImg {

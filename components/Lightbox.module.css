@@ -1,0 +1,99 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(15, 15, 15, 0.94);
+  animation: lbFade 0.2s ease-out;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.stage {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.imageWrap {
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 0;
+  width: 100%;
+}
+
+.image {
+  object-fit: contain;
+}
+
+.caption {
+  flex: 0 0 auto;
+  display: flex;
+  gap: var(--space-md);
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-sm) var(--space-md) calc(var(--space-md) + env(safe-area-inset-bottom, 0px));
+  color: var(--white);
+  font-size: var(--text-small);
+  text-align: center;
+}
+
+.captionText {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.counter {
+  color: rgba(255, 255, 255, 0.6);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.close,
+.nav {
+  position: absolute;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+  color: var(--white);
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+}
+
+.close:hover,
+.nav:hover,
+.close:focus-visible,
+.nav:focus-visible {
+  background: var(--sogn-green);
+  outline: none;
+}
+
+.close {
+  top: calc(var(--space-sm) + env(safe-area-inset-top, 0px));
+  right: var(--space-sm);
+  width: 44px;
+  height: 44px;
+}
+
+.nav {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+}
+
+.prev { left: var(--space-sm); }
+.next { right: var(--space-sm); }
+
+@keyframes lbFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .overlay { animation: none; }
+}

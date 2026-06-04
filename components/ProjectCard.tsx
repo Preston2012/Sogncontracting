@@ -1,34 +1,37 @@
 import Image from "next/image";
 import { PlaceholderImage } from "@/components/PlaceholderImage";
+import { projectImages } from "@/config/projects";
 import styles from "./ProjectCard.module.css";
-import type { ProjectData } from "@/config/projects";
+import type { LightboxImage, ProjectData } from "@/config/projects";
 
 interface ProjectCardProps {
   project: ProjectData;
-  onClick: () => void;
+  onOpen: (images: LightboxImage[], index: number) => void;
   delay?: number;
 }
 
 const CARD_SIZES = "(max-width: 479px) 92vw, (max-width: 639px) 46vw, (max-width: 1024px) 23vw, 250px";
 
-export function ProjectCard({
-  project,
-  onClick,
-  delay = 0,
-}: ProjectCardProps): JSX.Element {
+export function ProjectCard({ project, onOpen, delay = 0 }: ProjectCardProps): JSX.Element {
   const heroPair = project.pairs[0];
+  const images = project.visible ? projectImages(project) : [];
+
+  function open(src: string): void {
+    const i = images.findIndex((im) => im.src === src);
+    onOpen(images, i < 0 ? 0 : i);
+  }
 
   return (
-    <button
-      className={styles.card}
-      onClick={onClick}
-      style={{ transitionDelay: `${delay}ms` }}
-      aria-label={`View ${project.title} gallery`}
-    >
+    <article className={styles.card} style={{ transitionDelay: `${delay}ms` }}>
       <div className={styles.imageWrap}>
         {project.visible ? (
           <div className={styles.pair}>
-            <div className={styles.imgContainer}>
+            <button
+              type="button"
+              className={styles.imgButton}
+              onClick={() => open(heroPair.before)}
+              aria-label={`View ${project.title} before photo full size`}
+            >
               <span className={styles.badge} aria-hidden="true">Before</span>
               <Image
                 src={heroPair.before}
@@ -39,8 +42,13 @@ export function ProjectCard({
                 sizes={CARD_SIZES}
                 loading="lazy"
               />
-            </div>
-            <div className={styles.imgContainer}>
+            </button>
+            <button
+              type="button"
+              className={styles.imgButton}
+              onClick={() => open(heroPair.after)}
+              aria-label={`View ${project.title} after photo full size`}
+            >
               <span className={`${styles.badge} ${styles.badgeAfter}`} aria-hidden="true">After</span>
               <Image
                 src={heroPair.after}
@@ -51,7 +59,7 @@ export function ProjectCard({
                 sizes={CARD_SIZES}
                 loading="lazy"
               />
-            </div>
+            </button>
           </div>
         ) : (
           <div className={styles.pair}>
@@ -70,6 +78,6 @@ export function ProjectCard({
         <span className={styles.categoryBadge} aria-hidden="true">{project.category}</span>
         <h2 className={styles.title}>{project.title}</h2>
       </div>
-    </button>
+    </article>
   );
 }

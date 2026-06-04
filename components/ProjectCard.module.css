@@ -6,7 +6,6 @@
   overflow: hidden;
   text-align: left;
   background: var(--white);
-  cursor: pointer;
   transition: border-color 0.2s ease;
   padding: 0;
 }
@@ -29,6 +28,25 @@
 .imgContainer {
   position: relative;
   overflow: hidden;
+}
+
+.imgButton {
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+}
+
+.imgButton:focus-visible {
+  outline: 2px solid var(--sogn-green);
+  outline-offset: -2px;
 }
 
 .badge {

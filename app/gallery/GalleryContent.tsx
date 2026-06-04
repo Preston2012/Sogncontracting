@@ -2,17 +2,22 @@
 
 import { useState, useMemo } from "react";
 import { projects } from "@/config/projects";
-import type { CategoryId, ProjectData } from "@/config/projects";
+import type { CategoryId, LightboxImage } from "@/config/projects";
 import { features } from "@/config/features";
 import { FilterBar } from "@/components/FilterBar";
 import { ProjectCard } from "@/components/ProjectCard";
-import { ProjectGalleryModal } from "@/components/ProjectGalleryModal";
 import { ShowcaseProject } from "@/components/ShowcaseProject";
+import { Lightbox } from "@/components/Lightbox";
 import styles from "./page.module.css";
+
+interface LightboxState {
+  images: LightboxImage[];
+  index: number;
+}
 
 export function GalleryContent(): JSX.Element {
   const [activeFilter, setActiveFilter] = useState<CategoryId>("all");
-  const [selectedProject, setSelectedProject] = useState<ProjectData | null>(null);
+  const [lightbox, setLightbox] = useState<LightboxState | null>(null);
   const allPlaceholders = projects.every((p) => !p.visible);
 
   const filtered = useMemo(() => {
@@ -30,9 +35,13 @@ export function GalleryContent(): JSX.Element {
     [filtered]
   );
 
+  function openLightbox(images: LightboxImage[], index: number): void {
+    if (images.length === 0) return;
+    setLightbox({ images, index });
+  }
+
   return (
     <>
-      {/* Portfolio in progress note */}
       {allPlaceholders && (
         <div className="container">
           <p className={styles.inProgress}>
@@ -41,33 +50,26 @@ export function GalleryContent(): JSX.Element {
           </p>
         </div>
       )}
-      {/* Filter */}
+
       <div className="container">
         <FilterBar active={activeFilter} onChange={setActiveFilter} />
       </div>
 
-      {/* Showcase projects */}
       {showcaseProjects.length > 0 && (
         <section className={styles.showcaseSection}>
           <div className="container">
             {showcaseProjects.map((project, i) => (
-              <ShowcaseProject key={project.id} project={project} priority={i === 0} />
+              <ShowcaseProject key={project.id} project={project} onOpen={openLightbox} priority={i === 0} />
             ))}
           </div>
         </section>
       )}
 
-      {/* Grid */}
       <section className={styles.gridSection}>
         <div className="container">
           <div className={styles.grid}>
             {standardProjects.map((project, i) => (
-              <ProjectCard
-                key={project.id}
-                project={project}
-                onClick={() => setSelectedProject(project)}
-                delay={i * 50}
-              />
+              <ProjectCard key={project.id} project={project} onOpen={openLightbox} delay={i * 50} />
             ))}
           </div>
 
@@ -77,11 +79,12 @@ export function GalleryContent(): JSX.Element {
         </div>
       </section>
 
-      {/* Modal */}
-      {selectedProject && (
-        <ProjectGalleryModal
-          project={selectedProject}
-          onClose={() => setSelectedProject(null)}
+      {lightbox && (
+        <Lightbox
+          images={lightbox.images}
+          index={lightbox.index}
+          onClose={() => setLightbox(null)}
+          onNavigate={(index) => setLightbox((s) => (s ? { ...s, index } : s))}
         />
       )}
     </>
