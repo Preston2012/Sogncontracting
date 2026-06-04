@@ -115,12 +115,22 @@ export const projects: ProjectData[] = [
     visible: true,
   },
   {
-    id: "living-dining-2024",
-    title: "Living Room & Dining Remodel",
+    id: "living-2024",
+    title: "Living Room Remodel",
     category: "remodeling",
-    description: "Open-concept living and dining room transformation. Wood paneling removed, fresh paint and accent wall, new hardwood flooring throughout, modern lighting.",
+    description: "Living room remodel. Wood paneling removed, fresh paint with a new accent wall, new hardwood flooring, and modern lighting.",
     pairs: [
       { before: "/projects-v2/living-dining-2024/before-1.webp", after: "/projects-v2/living-dining-2024/after-1.webp", label: "Living room" },
+    ],
+    featured: false,
+    visible: true,
+  },
+  {
+    id: "dining-2024",
+    title: "Dining Room Remodel",
+    category: "remodeling",
+    description: "Dining room remodel in the same open-concept space. Fresh paint, new hardwood flooring, and modern lighting to match the living room.",
+    pairs: [
       { before: "/projects-v2/living-dining-2024/before-2.webp", after: "/projects-v2/living-dining-2024/after-2.webp", label: "Dining area" },
     ],
     featured: false,
