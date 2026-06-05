@@ -244,6 +244,12 @@ export const services: ServiceData[] = [
       },
     ],
     footerNote: "Licensed and insured roofing work.",
+    featuredImage: {
+      src: "/projects-v2/custom-addition-2026/progress-16.webp",
+      alt: "New metal roof on a home addition by Sogn Contracting, Bandon Oregon",
+      width: 640,
+      height: 296,
+    },
   },
   {
     id: "decks",
