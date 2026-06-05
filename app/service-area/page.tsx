@@ -7,7 +7,7 @@ import { breadcrumbSchema } from "@/config/schema";
 import styles from "../content.module.css";
 
 export const metadata: Metadata = {
-  title: "Service Area | Bandon & the Southern Oregon Coast",
+  title: "Service Area: Southern Oregon Coast",
   description:
     "Sogn Contracting serves Bandon, Coos Bay, North Bend, Coquille, Myrtle Point, and Port Orford. Licensed general contractor since 1995, CCB# 257491.",
   alternates: { canonical: "/service-area/" },

@@ -5,7 +5,7 @@ import { breadcrumbSchema, faqSchema, type FaqEntry } from "@/config/schema";
 import styles from "../content.module.css";
 
 export const metadata: Metadata = {
-  title: "Remodel & Construction Costs on the Oregon Coast",
+  title: "Oregon Coast Remodel & Build Costs",
   description:
     "What drives the cost of a remodel, addition, or build on the Southern Oregon Coast, and how Sogn Contracting prices a project. Free, honest estimates.",
   alternates: { canonical: "/cost/" },
@@ -17,7 +17,7 @@ const factors = [
   "Site conditions. Slope, drainage, access, and soil all affect foundation and site work.",
   "Structural and permit work. Moving walls, adding square footage, and engineering add cost.",
   "Condition of the existing home. Hidden rot, old wiring, or plumbing can change a remodel budget.",
-  "Coastal exposure. Wind and salt air make material choices for roofing, siding, and decks matter.",
+  "Coastal exposure. Wind and salt air affect material choices for roofing, siding, and decks.",
 ];
 
 const faq: FaqEntry[] = [

@@ -83,8 +83,7 @@ export default function ServicePage({ params }: { params: { slug: string } }): J
                   sizes="(max-width: 760px) 92vw, 720px"
                 />
                 <figcaption className={styles.projectCaption}>
-                  A recent {service.title.toLowerCase()} project. See more in our{" "}
-                  <a href="/gallery/">gallery</a>.
+                  A recent project. See more in our <a href="/gallery/">gallery</a>.
                 </figcaption>
               </figure>
             )}
@@ -112,7 +111,7 @@ export default function ServicePage({ params }: { params: { slug: string } }): J
               {areas.map((area) => (
                 <li key={area.slug}>
                   <a className={styles.linkCard} href={`/service-area/${area.slug}/`}>
-                    {service.title} in {area.name}
+                    {area.name}, OR
                   </a>
                 </li>
               ))}

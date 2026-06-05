@@ -141,13 +141,13 @@ export const areas: AreaData[] = [
     slug: "myrtle-point",
     name: "Myrtle Point",
     county: "Coos County",
-    distanceFromBandonMi: 25,
+    distanceFromBandonMi: 22,
     zip: "97458",
     permitJurisdiction: "City of Myrtle Point and Coos County",
     blurb:
-      "Myrtle Point is a small Coquille River valley town about 25 miles from Bandon, and we serve it regularly.",
+      "Myrtle Point is a small Coquille River valley town about 22 miles from Bandon, and we serve it regularly.",
     localContext: [
-      "Myrtle Point is a small town in the Coquille River valley, about 25 miles from our Bandon shop.",
+      "Myrtle Point is a small town in the Coquille River valley, about 22 miles from our Bandon shop.",
       "It is a more rural, agricultural area with older homes and outbuildings, so remodels, additions, repairs, and shop or garage builds are common.",
       "Rural lots often involve site work, grading, and concrete, which we handle along with the build.",
       "Permits run through the City of Myrtle Point and Coos County building departments.",
@@ -156,7 +156,7 @@ export const areas: AreaData[] = [
     faq: [
       {
         q: "Do you serve Myrtle Point?",
-        a: "Yes. Myrtle Point is about 25 miles from our Bandon shop and is part of our regular service area.",
+        a: "Yes. Myrtle Point is about 22 miles from our Bandon shop and is part of our regular service area.",
       },
       {
         q: "Do you do site work on rural properties?",
