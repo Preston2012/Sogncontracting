@@ -4,7 +4,7 @@ import { Button } from "@/components/Button";
 import styles from "./not-found.module.css";
 
 export const metadata: Metadata = {
-  title: "Page Not Found | Sogn Contracting LLC",
+  title: "Page Not Found",
   description:
     "The page you are looking for does not exist. Return to the Sogn Contracting homepage.",
 };

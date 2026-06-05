@@ -6,7 +6,7 @@ import styles from "../legal.module.css";
 const LAST_UPDATED = "May 30, 2026";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | Sogn Contracting LLC",
+  title: "Terms of Service",
   description: "The terms that govern your use of the Sogn Contracting LLC website.",
   alternates: { canonical: "/terms/" },
 };

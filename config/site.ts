@@ -34,12 +34,12 @@ export const site = {
         "Licensed Bandon general contractor since 1995. Residential & commercial construction, remodeling, and custom homes on the Southern Oregon Coast. CCB# 257491.",
     },
     services: {
-      title: "Construction Services | Sogn Contracting LLC",
+      title: "Construction Services",
       description:
         "Full-service residential and commercial construction in Bandon, Oregon. Remodeling, custom homes, additions, roofing, decks, concrete, and commercial builds. 30+ years of experience.",
     },
     gallery: {
-      title: "Our Work | Sogn Contracting LLC",
+      title: "Our Work",
       description:
         "Before and after project photos from Sogn Contracting. Kitchen remodels, exterior renovations, commercial builds, and more across the Southern Oregon Coast.",
     },

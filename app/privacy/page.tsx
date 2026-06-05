@@ -5,7 +5,7 @@ import styles from "../legal.module.css";
 const LAST_UPDATED = "May 30, 2026";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Sogn Contracting LLC",
+  title: "Privacy Policy",
   description:
     "How Sogn Contracting LLC collects, uses, and protects the information you share through our website.",
   alternates: { canonical: "/privacy/" },
