@@ -287,6 +287,12 @@ export const services: ServiceData[] = [
       },
     ],
     footerNote: "Serving the local area.",
+    featuredImage: {
+      src: "/projects-v2/custom-addition-2026/progress-14.webp",
+      alt: "Custom cedar deck with railings and stairs by Sogn Contracting, Bandon Oregon",
+      width: 640,
+      height: 480,
+    },
   },
   {
     id: "commercial",
