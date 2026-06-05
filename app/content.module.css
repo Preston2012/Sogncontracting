@@ -1,0 +1,249 @@
+/* Shared styles for new content pages (service, area, faq, cost, contact).
+   Built on the same tokens and prose system as legal.module.css so the new
+   pages read as 100% native to the existing site. No new design tokens. */
+
+.hero {
+  padding: var(--space-2xl) 0 var(--space-xl);
+  border-bottom: 1px solid var(--border-light);
+  background: var(--bg-light);
+}
+.eyebrow {
+  display: inline-block;
+  font-size: var(--text-small);
+  font-weight: var(--weight-semibold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sogn-green-text);
+  margin-bottom: var(--space-sm);
+}
+.title {
+  font-family: var(--font-heading);
+  font-size: var(--text-h1);
+  color: var(--charcoal);
+  margin-bottom: var(--space-sm);
+  max-width: 760px;
+}
+.subtitle {
+  font-size: var(--text-body);
+  color: var(--text-secondary);
+  max-width: 640px;
+  line-height: var(--leading-normal);
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  font-size: var(--text-small);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-md);
+}
+.breadcrumb a {
+  color: var(--sogn-green-text);
+  text-decoration: none;
+}
+.breadcrumb a:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.breadcrumbSep {
+  margin: 0 var(--space-xs);
+  color: var(--border-dark);
+}
+
+/* Body + prose */
+.body {
+  padding: var(--space-2xl) 0;
+}
+.prose {
+  max-width: 720px;
+  margin: 0 auto;
+}
+.prose p {
+  color: var(--text-primary);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-md);
+}
+.prose a {
+  color: var(--sogn-green-text);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.prose a:hover {
+  color: var(--charcoal);
+}
+.prose strong {
+  font-weight: var(--weight-semibold);
+}
+
+.sectionTitle {
+  font-family: var(--font-heading);
+  font-size: var(--text-h2);
+  color: var(--charcoal);
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-md);
+}
+
+/* Feature / scope list */
+.features {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+@media (min-width: 600px) {
+  .features {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.feature {
+  position: relative;
+  padding-left: var(--space-lg);
+  color: var(--text-primary);
+  line-height: var(--leading-normal);
+}
+.feature::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 8px;
+  height: 8px;
+  background: var(--sogn-green);
+  border-radius: var(--radius-badge);
+}
+
+/* Numbered process steps */
+.steps {
+  list-style: none;
+  counter-reset: step;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+.step {
+  counter-increment: step;
+  position: relative;
+  padding-left: calc(var(--space-lg) + var(--space-sm));
+  color: var(--text-primary);
+  line-height: var(--leading-normal);
+  min-height: 28px;
+  display: flex;
+  align-items: center;
+}
+.step::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 28px;
+  height: 28px;
+  background: var(--sogn-green);
+  color: var(--green-badge-text);
+  font-weight: var(--weight-bold);
+  font-size: var(--text-small);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* FAQ */
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+.faqItem {
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: var(--space-md);
+}
+.faqQ {
+  font-family: var(--font-heading);
+  font-size: var(--text-h3);
+  color: var(--charcoal);
+  margin-bottom: var(--space-xs);
+}
+.faqA {
+  color: var(--text-primary);
+  line-height: var(--leading-relaxed);
+  margin: 0;
+}
+
+/* Cross-link grid (areas <-> services) */
+.linkGrid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+@media (min-width: 600px) {
+  .linkGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.linkCard {
+  display: block;
+  padding: var(--space-md);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-card);
+  background: var(--white);
+  color: var(--charcoal);
+  text-decoration: none;
+  font-weight: var(--weight-medium);
+  transition: border-color 0.15s ease;
+}
+.linkCard:hover {
+  border-color: var(--border-green);
+}
+
+/* Info box (NAP / details) */
+.infoBox {
+  margin: var(--space-md) 0 var(--space-lg);
+  padding: var(--space-lg);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-card);
+  background: var(--white);
+}
+.infoBox p {
+  margin-bottom: var(--space-xs);
+  line-height: var(--leading-normal);
+}
+.infoBox a {
+  color: var(--sogn-green-text);
+  text-decoration: none;
+}
+.infoBox a:hover {
+  text-decoration: underline;
+}
+
+/* Authentic project figure */
+.projectFigure {
+  margin: var(--space-lg) 0;
+}
+.projectImg {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-card);
+}
+.projectCaption {
+  font-size: var(--text-small);
+  color: var(--text-secondary);
+  margin-top: var(--space-sm);
+}
+.projectCaption a {
+  color: var(--sogn-green-text);
+}
+
+/* Full-width feature image (no caption, no overlay wash) */
+.featureFull {
+  margin: var(--space-lg) 0;
+}
+.featureFullImg {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-card);
+}

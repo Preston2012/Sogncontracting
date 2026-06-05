@@ -41,6 +41,10 @@ export function ServiceDetailCard({
       </div>
 
       <p className={styles.footer}>{service.footerNote}</p>
+
+      <a className={styles.learnMore} href={`/services/${service.slug}/`}>
+        Learn more about {service.title} <span aria-hidden="true">&rarr;</span>
+      </a>
     </div>
   );
 }
