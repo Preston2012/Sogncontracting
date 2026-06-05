@@ -1,13 +1,36 @@
 import { site } from "@/config/site";
+import { services } from "@/config/services";
+import { areas } from "@/config/areas";
 import styles from "./Footer.module.css";
+
+// Footer trades shown in the Services column (subset of the full list, which
+// lives on /services/). Order matches the services page.
+const FOOTER_SERVICES = [
+  "remodeling",
+  "additions",
+  "custom-homes",
+  "roofing",
+  "decks",
+  "concrete",
+];
+
+const companyLinks = [
+  { label: "Gallery", href: "/gallery/" },
+  { label: "Project Costs", href: "/cost/" },
+  { label: "FAQ", href: "/faq/" },
+  { label: "Contact", href: "/contact/" },
+];
 
 export function Footer(): JSX.Element {
   const year = new Date().getFullYear();
+  const footerServices = FOOTER_SERVICES
+    .map((slug) => services.find((s) => s.slug === slug))
+    .filter((s): s is NonNullable<typeof s> => Boolean(s));
 
   return (
     <footer className={styles.footer} role="contentinfo">
       <div className={`container ${styles.inner}`}>
-        {/* Company info */}
+        {/* Company info + contact */}
         <div className={styles.brand}>
           <span className={styles.companyName}>{site.name}</span>
           <p className={styles.scripture}>
@@ -15,25 +38,61 @@ export function Footer(): JSX.Element {
             <br />
             <span className={styles.verse}>John 3:16</span>
           </p>
+          <div className={styles.contact}>
+            <a href={`tel:${site.contact.phoneTel}`} className={styles.contactLink}>
+              {site.contact.phone}
+            </a>
+            <a href={`mailto:${site.contact.email}`} className={styles.contactLink}>
+              {site.contact.email}
+            </a>
+            <span className={styles.address}>{site.contact.address.full}</span>
+          </div>
         </div>
 
-        {/* Contact */}
-        <div className={styles.contact}>
-          <a href={`tel:${site.contact.phoneTel}`} className={styles.contactLink}>
-            {site.contact.phone}
-          </a>
-          <a href={`mailto:${site.contact.email}`} className={styles.contactLink}>
-            {site.contact.email}
-          </a>
-          <span className={styles.address}>{site.contact.address.full}</span>
-        </div>
+        {/* Services */}
+        <nav className={styles.col} aria-label="Services">
+          <span className={styles.colTitle}>Services</span>
+          <ul className={styles.colList}>
+            {footerServices.map((service) => (
+              <li key={service.slug}>
+                <a href={`/services/${service.slug}/`} className={styles.colLink}>
+                  {service.title}
+                </a>
+              </li>
+            ))}
+            <li>
+              <a href="/services/" className={styles.colLink}>All services</a>
+            </li>
+          </ul>
+        </nav>
 
-        {/* Nav links */}
-        <nav className={styles.nav} aria-label="Footer navigation">
-          <ul className={styles.navList}>
-            {site.nav.filter(n => n.label !== "Contact").map((item) => (
+        {/* Areas Served */}
+        <nav className={styles.col} aria-label="Areas served">
+          <span className={styles.colTitle}>Areas Served</span>
+          <ul className={styles.colList}>
+            {areas.map((area) => (
+              <li key={area.slug}>
+                <a href={`/service-area/${area.slug}/`} className={styles.colLink}>
+                  {area.name}
+                </a>
+              </li>
+            ))}
+            <li>
+              <a href="/service-area/" className={styles.colLink}>All areas</a>
+            </li>
+          </ul>
+        </nav>
+
+        {/* Company */}
+        <nav className={styles.col} aria-label="Company">
+          <span className={styles.colTitle}>Company</span>
+          <ul className={styles.colList}>
+            <li>
+              <a href="/" className={styles.colLink}>Home</a>
+            </li>
+            {companyLinks.map((item) => (
               <li key={item.href}>
-                <a href={item.href} className={styles.navLink}>
+                <a href={item.href} className={styles.colLink}>
                   {item.label}
                 </a>
               </li>

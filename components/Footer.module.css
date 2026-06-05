@@ -118,10 +118,44 @@
   color: var(--text-on-dark-sub);
 }
 
+/* Link columns (Services, Areas Served, Company) */
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.colTitle {
+  font-size: var(--text-caption);
+  font-weight: var(--weight-semibold);
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: var(--space-xs);
+}
+
+.colList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  list-style: none;
+}
+
+.colLink {
+  font-size: var(--text-small);
+  color: var(--text-on-dark-sub);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.colLink:hover {
+  color: var(--sogn-green-on-dark);
+}
+
 /* Desktop layout */
 @media (min-width: 768px) {
   .inner {
-    grid-template-columns: 1.5fr 1fr 1fr;
+    grid-template-columns: 1.6fr 1fr 1fr 1fr;
     gap: var(--space-xl);
   }
 

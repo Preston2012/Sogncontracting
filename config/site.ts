@@ -49,7 +49,7 @@ export const site = {
     { label: "Home", href: "/" },
     { label: "Services", href: "/services/" },
     { label: "Gallery", href: "/gallery/" },
-    { label: "Contact", href: "/#contact" },
+    { label: "Contact", href: "/contact/" },
   ],
 
   legal: [
@@ -60,10 +60,13 @@ export const site = {
   structuredData: {
     "@context": "https://schema.org",
     "@type": "GeneralContractor",
+    "@id": "https://www.sogncontracting.com/#business",
     name: "Sogn Contracting LLC",
     description:
       "Licensed general contractor serving Bandon and the Southern Oregon Coast since 1995. Residential and commercial construction.",
     url: "https://www.sogncontracting.com",
+    logo: "https://www.sogncontracting.com/logo-full.png",
+    image: "https://www.sogncontracting.com/og.png",
     telephone: "+16029040741",
     email: "sogncontracting@gmail.com",
     address: {
@@ -80,15 +83,23 @@ export const site = {
       longitude: -124.41,
     },
     foundingDate: "1995",
-    areaServed: {
-      "@type": "GeoCircle",
-      geoMidpoint: {
-        "@type": "GeoCoordinates",
-        latitude: 43.09,
-        longitude: -124.41,
+    areaServed: [
+      {
+        "@type": "GeoCircle",
+        geoMidpoint: {
+          "@type": "GeoCoordinates",
+          latitude: 43.09,
+          longitude: -124.41,
+        },
+        geoRadius: "50 mi",
       },
-      geoRadius: "50 mi",
-    },
+      { "@type": "City", name: "Bandon, Oregon" },
+      { "@type": "City", name: "Coos Bay, Oregon" },
+      { "@type": "City", name: "North Bend, Oregon" },
+      { "@type": "City", name: "Coquille, Oregon" },
+      { "@type": "City", name: "Myrtle Point, Oregon" },
+      { "@type": "City", name: "Port Orford, Oregon" },
+    ],
     hasCredential: {
       "@type": "EducationalOccupationalCredential",
       credentialCategory: "CCB License",
