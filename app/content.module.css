@@ -236,3 +236,14 @@
 .projectCaption a {
   color: var(--sogn-green-text);
 }
+
+/* Full-width feature image (no caption, no overlay wash) */
+.featureFull {
+  margin: var(--space-lg) 0;
+}
+.featureFullImg {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-card);
+}

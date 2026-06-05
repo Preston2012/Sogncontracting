@@ -1,20 +1,22 @@
 .footer {
   background-color: var(--bg-footer);
   color: var(--text-on-dark);
-  padding: var(--space-xl) 0 var(--space-lg);
+  padding: var(--space-lg) 0 var(--space-md);
 }
 
 .inner {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-lg);
+  /* Mobile: Services + Areas Served sit side by side; brand and bottom span full. */
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md) var(--space-lg);
 }
 
 /* Brand section */
 .brand {
+  grid-column: 1 / -1;
   display: flex;
   flex-direction: column;
-  gap: var(--space-md);
+  gap: var(--space-sm);
 }
 
 .companyName {
@@ -88,14 +90,15 @@
 
 /* Bottom bar */
 .bottom {
+  grid-column: 1 / -1;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: var(--space-md);
-  padding-top: var(--space-lg);
+  gap: var(--space-sm);
+  padding-top: var(--space-md);
   padding-right: 56px;
   border-top: 2px solid var(--border-dark);
-  margin-top: var(--space-sm);
+  margin-top: var(--space-xs);
 }
 
 .bottomLinks {
@@ -137,7 +140,7 @@
 .colList {
   display: flex;
   flex-direction: column;
-  gap: var(--space-sm);
+  gap: var(--space-xs);
   list-style: none;
 }
 
@@ -156,7 +159,11 @@
 @media (min-width: 768px) {
   .inner {
     grid-template-columns: 1.6fr 1fr 1fr 1fr;
-    gap: var(--space-xl);
+    gap: var(--space-lg) var(--space-xl);
+  }
+
+  .brand {
+    grid-column: auto;
   }
 
   .bottom {

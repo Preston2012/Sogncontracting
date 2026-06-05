@@ -34,6 +34,20 @@ export default function ServicePage({ params }: { params: { slug: string } }): J
     : undefined;
   const relatedAfter = related?.pairs[0]?.after;
 
+  // Feature image: an explicit one wins, otherwise fall back to the related
+  // project's "after" photo. `full` renders large with no caption.
+  const feature = service.featuredImage
+    ? service.featuredImage
+    : relatedAfter
+      ? {
+          src: relatedAfter,
+          alt: `${related?.title} by Sogn Contracting, Bandon Oregon`,
+          width: 1000,
+          height: 750,
+          full: false,
+        }
+      : undefined;
+
   const schema = [
     breadcrumbSchema([
       { name: "Home", path: "/" },
@@ -72,14 +86,27 @@ export default function ServicePage({ params }: { params: { slug: string } }): J
           <div className={styles.prose}>
             <p>{service.description}</p>
 
-            {relatedAfter && (
+            {feature && feature.full && (
+              <figure className={styles.featureFull}>
+                <Image
+                  src={feature.src}
+                  alt={feature.alt}
+                  className={styles.featureFullImg}
+                  width={feature.width}
+                  height={feature.height}
+                  sizes="(max-width: 760px) 92vw, 720px"
+                />
+              </figure>
+            )}
+
+            {feature && !feature.full && (
               <figure className={styles.projectFigure}>
                 <Image
-                  src={relatedAfter}
-                  alt={`${related?.title} by Sogn Contracting, Bandon Oregon`}
+                  src={feature.src}
+                  alt={feature.alt}
                   className={styles.projectImg}
-                  width={1000}
-                  height={750}
+                  width={feature.width}
+                  height={feature.height}
                   sizes="(max-width: 760px) 92vw, 720px"
                 />
                 <figcaption className={styles.projectCaption}>

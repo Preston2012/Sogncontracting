@@ -24,6 +24,14 @@ export interface ServiceData {
   footerNote: string;
   /** Gallery project id whose real photos authentically depict this trade. Optional. */
   relatedProjectId?: string;
+  /** Explicit feature image, overrides relatedProjectId. `full` renders it large with no caption. */
+  featuredImage?: {
+    src: string;
+    alt: string;
+    width: number;
+    height: number;
+    full?: boolean;
+  };
 }
 
 export interface ServiceGridItem {
@@ -142,6 +150,13 @@ export const services: ServiceData[] = [
       },
     ],
     footerNote: "Full warranty included.",
+    featuredImage: {
+      src: "/hero-home-v2.webp",
+      alt: "Creswell Oregon custom build",
+      width: 1280,
+      height: 549,
+      full: true,
+    },
   },
   {
     id: "additions",
@@ -358,6 +373,12 @@ export const services: ServiceData[] = [
       },
     ],
     footerNote: "Equipment and crew for jobs of all sizes.",
+    featuredImage: {
+      src: "/projects-v2/home-exterior-2024/progress-01.webp",
+      alt: "Long concrete walkway poured by Sogn Contracting, Bandon Oregon",
+      width: 1000,
+      height: 750,
+    },
   },
   {
     id: "repairs",
