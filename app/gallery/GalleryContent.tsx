@@ -1,14 +1,16 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import dynamic from "next/dynamic";
 import { projects } from "@/config/projects";
 import type { CategoryId, LightboxImage } from "@/config/projects";
 import { features } from "@/config/features";
 import { FilterBar } from "@/components/FilterBar";
 import { ProjectCard } from "@/components/ProjectCard";
 import { ShowcaseProject } from "@/components/ShowcaseProject";
-import { Lightbox } from "@/components/Lightbox";
 import styles from "./page.module.css";
+
+const Lightbox = dynamic(() => import("@/components/Lightbox").then((m) => m.Lightbox), { ssr: false });
 
 interface LightboxState {
   images: LightboxImage[];
