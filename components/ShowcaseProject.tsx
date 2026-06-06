@@ -46,6 +46,7 @@ export function ShowcaseProject({ project, onOpen, priority = false }: ShowcaseP
             width={1000}
             height={750}
             sizes={HERO_SIZES}
+            quality={62}
             priority={priority}
           />
         </button>
@@ -63,6 +64,7 @@ export function ShowcaseProject({ project, onOpen, priority = false }: ShowcaseP
             width={1000}
             height={750}
             sizes={HERO_SIZES}
+            quality={62}
             priority={priority}
           />
         </button>
@@ -87,6 +89,7 @@ export function ShowcaseProject({ project, onOpen, priority = false }: ShowcaseP
                   width={600}
                   height={450}
                   sizes={PROGRESS_SIZES}
+                  quality={62}
                   loading="lazy"
                 />
               </button>

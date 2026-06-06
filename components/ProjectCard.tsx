@@ -40,6 +40,7 @@ export function ProjectCard({ project, onOpen, delay = 0 }: ProjectCardProps): J
                 width={800}
                 height={600}
                 sizes={CARD_SIZES}
+                quality={62}
                 loading="lazy"
               />
             </button>
@@ -57,6 +58,7 @@ export function ProjectCard({ project, onOpen, delay = 0 }: ProjectCardProps): J
                 width={800}
                 height={600}
                 sizes={CARD_SIZES}
+                quality={62}
                 loading="lazy"
               />
             </button>
