@@ -54,7 +54,7 @@ export const serviceGrid: ServiceGridItem[] = [
   {
     title: "Renovations",
     icon: "renovation",
-    oneLiner: "Kitchens, bathrooms, basements. Transforming spaces with precision.",
+    oneLiner: "Kitchens, bathrooms, basements, and full interiors.",
   },
   {
     title: "Additions",
@@ -73,7 +73,7 @@ export const services: ServiceData[] = [
     metaDescription:
       "Kitchen, bath, and whole-home remodeling on the Southern Oregon Coast. Licensed Bandon contractor since 1995, CCB# 257491. Free estimates.",
     description:
-      "Transforming your space with precision and care. Whether it's a single room or a whole-home renovation, we manage every detail from demolition to the final coat of paint.",
+      "Whether it's a single room or a whole-home renovation, we manage every detail from demolition to the final coat of paint.",
     intro:
       "From a single room to a whole-home renovation, we handle every step from demolition to the final coat of paint, so the finished space fits the way you live.",
     icon: "renovation",
@@ -211,7 +211,7 @@ export const services: ServiceData[] = [
     metaDescription:
       "New roofs, re-roofing, and roof repair for homes and businesses on the Southern Oregon Coast. Licensed, CCB# 257491. Free estimates.",
     description:
-      "Protecting what matters most. New installs, repairs, and complete re-roofing for residential and commercial properties.",
+      "New installs, repairs, and complete re-roofing for homes and businesses, built for coastal weather.",
     intro:
       "A roof on the coast takes a beating from wind and rain. We install, repair, and re-roof homes and businesses so the structure underneath stays dry and protected.",
     icon: "roofing",
@@ -260,7 +260,7 @@ export const services: ServiceData[] = [
     metaDescription:
       "Decks, patios, and outdoor living built for the Oregon coast climate. Licensed Bandon contractor since 1995, CCB# 257491. Free estimates.",
     description:
-      "Creating outdoor spaces for relaxation and entertainment. Built to handle the Oregon coast climate.",
+      "Decks, patios, and outdoor living built to handle the Oregon coast climate.",
     intro:
       "An outdoor space you actually use, built to stand up to coastal weather. From decks to pergolas, we design and build for the way you spend time outside.",
     icon: "deck",
@@ -401,7 +401,7 @@ export const services: ServiceData[] = [
     metaDescription:
       "Honest, reliable home repairs and maintenance on the Southern Oregon Coast. Insurance restoration welcome. Licensed, CCB# 257491.",
     description:
-      "Property repairs done right the first time. No job too small when it comes to keeping your home in top shape.",
+      "Property repairs done right the first time. No job is too small to keep your home in good shape.",
     intro:
       "Not every job is a remodel. When something needs fixing, we show up, do it right the first time, and leave the place clean.",
     icon: "repairs",

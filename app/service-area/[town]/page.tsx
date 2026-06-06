@@ -19,7 +19,7 @@ export function generateMetadata({ params }: { params: { town: string } }): Meta
   if (!area) return {};
   return {
     title: `General Contractor in ${area.name}, OR`,
-    description: `Licensed general contractor serving ${area.name}, ${area.county}. Remodels, additions, custom homes, roofing, and concrete. Since 1995, CCB# ${site.credentials.ccb}.`,
+    description: `${area.blurb} Licensed since 1995, CCB# ${site.credentials.ccb}.`,
     alternates: { canonical: `/service-area/${area.slug}/` },
   };
 }
@@ -32,10 +32,9 @@ export default function AreaPage({ params }: { params: { town: string } }): JSX.
     .map((slug) => getServiceBySlug(slug))
     .filter((s): s is NonNullable<typeof s> => Boolean(s));
 
-  const distanceLine =
-    area.distanceFromBandonMi > 0
-      ? `based in Bandon, about ${area.distanceFromBandonMi} miles from ${area.name}`
-      : `based right here in ${area.name}`;
+  const nearbyAreas = area.nearby
+    .map((slug) => getAreaBySlug(slug))
+    .filter((a): a is NonNullable<typeof a> => Boolean(a));
 
   const schema = [
     breadcrumbSchema([
@@ -74,13 +73,10 @@ export default function AreaPage({ params }: { params: { town: string } }): JSX.
       <section className={styles.body}>
         <div className="container">
           <div className={styles.prose}>
-            <p>
-              {site.name} is a licensed general contractor {distanceLine}. We have built and
-              remodeled homes across {area.county} and the Southern Oregon Coast since 1995,
-              and we carry CCB# {site.credentials.ccb}.
-            </p>
+            <p>{area.intro}</p>
 
             <h2 className={styles.sectionTitle}>Construction services in {area.name}</h2>
+            <p>{area.serviceLead}</p>
             <ul className={styles.linkGrid}>
               {topServices.map((service) => (
                 <li key={service.slug}>
@@ -92,19 +88,36 @@ export default function AreaPage({ params }: { params: { town: string } }): JSX.
             </ul>
 
             <h2 className={styles.sectionTitle}>Building in {area.name}</h2>
-            <ul className={styles.features}>
-              {area.localContext.map((line, i) => (
-                <li key={i} className={styles.feature}>{line}</li>
-              ))}
-            </ul>
+            {area.localContext.map((para, i) => (
+              <p key={i}>{para}</p>
+            ))}
+
+            <h2 className={styles.sectionTitle}>
+              What makes building in {area.name} different
+            </h2>
+            <p>{area.angle}</p>
 
             <h2 className={styles.sectionTitle}>See our work</h2>
+            <p>{area.workNote}</p>
             <p>
-              Browse before and after photos of our remodels, additions, and exterior
-              renovations in the <a href="/gallery/">project gallery</a>. When you are ready,{" "}
-              <a href="/contact/">request a free estimate</a> and tell us about your{" "}
-              {area.name} project.
+              Browse the <a href="/gallery/">project gallery</a> or{" "}
+              <a href="/contact/">contact us for a free estimate</a>.
             </p>
+
+            {nearbyAreas.length > 0 && (
+              <>
+                <h2 className={styles.sectionTitle}>Areas we serve near {area.name}</h2>
+                <ul className={styles.linkGrid}>
+                  {nearbyAreas.map((n) => (
+                    <li key={n.slug}>
+                      <a className={styles.linkCard} href={`/service-area/${n.slug}/`}>
+                        {n.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
 
             <h2 className={styles.sectionTitle}>{area.name} questions</h2>
             <div className={styles.faqList}>
