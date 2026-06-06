@@ -17,7 +17,6 @@ export const metadata: Metadata = {
 export default function HomePage(): JSX.Element {
   return (
     <>
-      <link rel="preload" as="image" href="/hero-home-v2.webp" />
       <Hero />
       <SectionDivider variant="diagonal" />
       <ServiceGrid />
