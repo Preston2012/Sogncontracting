@@ -4,9 +4,10 @@ const path = require("path");
 const nextConfig = {
   trailingSlash: true,
   images: {
-    formats: ["image/avif", "image/webp"],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920],
-    minimumCacheTTL: 31536000,
+    loader: "custom",
+    loaderFile: "./image-loader.js",
+    deviceSizes: [360, 480, 640, 768, 960, 1280, 1440, 1920, 2560],
+    imageSizes: [360, 480, 640, 768],
   },
   experimental: {
     // Inline critical CSS via critters. Eliminates render-blocking on
