@@ -138,7 +138,7 @@ export const areas: AreaData[] = [
     serviceLead: "The jobs we handle most in North Bend:",
     localContext: [
       "North Bend is wrapped on three sides by the bay, and its housing reflects a long working history. A lot of the stock is midcentury, with older Craftsman and bungalow homes near downtown and the waterfront and newer single-family homes on larger lots toward the edges of town. That mix makes remodels, roof replacements, siding updates, and additions the steady work here.",
-      "The city is more affordable than much of the coast, with a median home price below the Oregon average, so a lot of what we do is practical: re-roofing an older home, updating siding, opening up a dated floor plan, or adding space to a house a family already owns. North Bend is also home to the only commercial airport on the Oregon coast and to Pony Village Mall, and it shares the Bay Area Hospital and the Port of Coos Bay economy with its sister city.",
+      "The city is more affordable than much of the coast, with a median home price below the Oregon average, so a lot of what we do is practical: re-roofing an older home, updating siding, opening up a dated floor plan, or adding space to a house a family already owns. North Bend is also home to the only airport on the Oregon coast with scheduled commercial airline service and to Pony Village Mall, and it shares the Bay Area Hospital and the Port of Coos Bay economy with its sister city.",
       "Bayfront and low-lying lots make drainage and foundation work worth planning carefully, the same as in Coos Bay. We account for that in the estimate so it is handled before framing, not discovered after.",
     ],
     angle:
