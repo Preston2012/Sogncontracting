@@ -23,7 +23,7 @@ export function Hero(): JSX.Element {
           alt=""
           fill
           priority
-          quality={68}
+          quality={55}
           sizes="100vw"
           className={styles.bandImg}
         />
