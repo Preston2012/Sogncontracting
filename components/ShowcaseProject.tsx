@@ -65,7 +65,7 @@ export function ShowcaseProject({ project, onOpen, priority = false }: ShowcaseP
             height={750}
             sizes={HERO_SIZES}
             quality={62}
-            priority={priority}
+            loading="lazy"
           />
         </button>
       </div>
