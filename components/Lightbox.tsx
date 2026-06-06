@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useCallback, useEffect, useRef } from "react";
 import styles from "./Lightbox.module.css";
 import type { LightboxImage } from "@/config/projects";
@@ -147,14 +146,12 @@ export function Lightbox({ images, index, onClose, onNavigate }: LightboxProps):
 
       <figure className={styles.stage}>
         <div className={styles.imageWrap}>
-          <Image
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
             key={current.src}
             src={current.src}
             alt={current.caption || "Project photo"}
-            fill
-            sizes="100vw"
             className={styles.image}
-            loading="eager"
           />
         </div>
         <figcaption className={styles.caption}>
