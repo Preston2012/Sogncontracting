@@ -7,6 +7,10 @@ import path from "path";
 
 const LADDER = [360, 480, 640, 768, 960, 1280, 1440, 1920, 2560];
 const Q = 72;
+// Per-image max width. Heavy full-bleed heroes that sit behind a veil do not
+// need full-resolution tiles, so cap them to keep the LCP byte cost low.
+// Key is the public-relative path without extension.
+const CAP = { "hero-home-v2": 640 };
 const PUB = "public";
 const OPT = path.join(PUB, "_opt");
 const EXEMPT = /(^|\/)(logo|apple-touch-icon|favicon|icon|og|mstile|android-chrome)[^/]*$|\.svg$/i;
@@ -40,6 +44,11 @@ for (const f of files) {
   if (native) widths.push(native);
   if (!widths.length) widths = [...LADDER];
   widths = [...new Set(widths)].sort((a, b) => a - b);
+  const cap = CAP[base];
+  if (cap) {
+    const capped = widths.filter(w => w <= cap);
+    widths = capped.length ? capped : [Math.min(...widths)];
+  }
   manifest[base] = widths;
   for (const w of widths) {
     const outF = path.join(OPT, base + "." + w + ".webp");
