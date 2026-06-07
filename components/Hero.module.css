@@ -1,6 +1,5 @@
 .hero {
   position: relative;
-  min-height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -20,8 +19,8 @@
 .logo { width: 360px; height: auto; display: block; }
 
 /* Full-width photo wash band (touches both edges). The photo is a next/image
-   fill: AVIF plus per-device sizing, priority loaded. Gradients live in
-   .bandWash so the photo can be optimized instead of a CSS background. */
+   fill: static WebP ladder (capped 640) plus per-device sizing, priority loaded.
+   Gradients live in .bandWash so the photo can be optimized instead of a CSS background. */
 .band {
   position: relative;
   width: 100%;
@@ -87,7 +86,7 @@
 }
 
 @media (max-width: 640px) {
-  .hero { min-height: 60vh; padding: var(--space-xl) 0; gap: var(--space-md); }
+  .hero { padding: var(--space-xl) 0; gap: var(--space-md); }
   .logo { width: 280px; }
   .band { padding: var(--space-lg) 0; }
   .bandInner { padding: var(--space-md); }
