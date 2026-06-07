@@ -25,7 +25,6 @@ export interface AreaData {
   /** Per-town opening body paragraph. Fully unique, fact-grounded. */
   intro: string;
   /** Per-town lead sentence before the services list. */
-  serviceLead: string;
   /** Verifiable local building context, rendered as prose paragraphs. No invented projects. */
   localContext: string[];
   /** One paragraph on what makes building in this town different (drive, exposure, stock, permits). */
@@ -51,7 +50,6 @@ export const areas: AreaData[] = [
       "Bandon is home. Sogn Contracting has built and remodeled here, at the mouth of the Coquille River, since 1995.",
     intro:
       "Sogn Contracting is based right here in Bandon, at the mouth of the Coquille River where it meets the Pacific. We have built and remodeled homes across town since 1995, from Old Town and the established neighborhoods up the hill to newer construction out toward the beaches and the Bandon Dunes area. Because our shop is in town, Bandon jobs get the fastest response and no travel charge, and we already know how the City of Bandon and Coos County handle permits and inspections. We carry CCB# 257491.",
-    serviceLead: "The work we take on most often in Bandon:",
     localContext: [
       "Bandon sits on the open coast, and its weather shapes how we build. This is one of the foggiest, most salt-sprayed stretches of the Oregon coast, with steady wind off the water and damp winters. On near-coast and oceanfront lots, that pushes us toward roofing, siding, decking, and fasteners chosen to hold up to salt and moisture rather than whatever is cheapest on the shelf.",
       "The town has a wide mix of building stock. Old Town runs about ten blocks along the river and is largely a rebuild after the 1936 gorse fire that took most of the original town, so many homes in the core date to the late 1930s and after. Up the hill are settled neighborhoods, and out toward the beaches and the resort there is newer and higher-end construction. That range means we work on everything from older-home remodels to ground-up custom homes.",
@@ -93,7 +91,6 @@ export const areas: AreaData[] = [
       "Coos Bay is the largest city on the Oregon coast, about 24 miles north of our Bandon shop, and part of our regular service area.",
     intro:
       "Coos Bay is the largest city on the Oregon coast and the medical, retail, and professional hub for the south coast region. It sits about 24 miles north of our Bandon shop, an easy run up Highway 101 that we make regularly. Sogn Contracting has built and remodeled across Coos County since 1995, and we carry CCB# 257491. The city's size and variety mean we see a wider range of jobs here than almost anywhere else we work.",
-    serviceLead: "The work we are called on for most in Coos Bay:",
     localContext: [
       "Coos Bay, known as Marshfield until 1944, grew up as a timber and shipping port and was once one of the busiest lumber ports in the world. That history shows in the housing: a lot of older homes from the port and mill era, a downtown commercial core in the Old Marshfield district along the bayfront boardwalk, and bayfront and hillside lots scattered through the city. We work on all of it, from kitchen and bath remodels in older homes to commercial tenant improvements downtown.",
       "Because Coos Bay is the regional center, with Bay Area Hospital, Southwestern Oregon Community College, and the main retail district, there is steady demand for both home work and light commercial work. The city is also short on housing and has new construction in the pipeline, including the planned Timber Cove subdivision on the west side, so remodels, additions, and new builds all have a place here.",
@@ -135,7 +132,6 @@ export const areas: AreaData[] = [
       "North Bend sits right next to Coos Bay, about 27 miles north of Bandon, and is part of our regular service area.",
     intro:
       "North Bend shares the bay with Coos Bay, and the two run together as one continuous community that locals call the Bay Area. It is about 27 miles north of our Bandon shop, just past Coos Bay on Highway 101. Sogn Contracting has built and remodeled across Coos County since 1995, and we carry CCB# 257491. North Bend has its own building department, and we handle that permitting along with the work.",
-    serviceLead: "The jobs we handle most in North Bend:",
     localContext: [
       "North Bend is wrapped on three sides by the bay, and its housing reflects a long working history. A lot of the stock is midcentury, with older Craftsman and bungalow homes near downtown and the waterfront and newer single-family homes on larger lots toward the edges of town. That mix makes remodels, roof replacements, siding updates, and additions the steady work here.",
       "The city is more affordable than much of the coast, with a median home price below the Oregon average, so a lot of what we do is practical: re-roofing an older home, updating siding, opening up a dated floor plan, or adding space to a house a family already owns. North Bend is also home to the only airport on the Oregon coast with scheduled commercial airline service and to Pony Village Mall, and it shares the Bay Area Hospital and the Port of Coos Bay economy with its sister city.",
@@ -177,7 +173,6 @@ export const areas: AreaData[] = [
       "Coquille is the Coos County seat, about 18 miles inland from Bandon along the Coquille River, and one of the closest towns we serve.",
     intro:
       "Coquille is the Coos County seat, set on the bank of the Coquille River in a broad inland valley about 18 miles from our Bandon shop. That makes it one of the closest towns we serve, and the county building department is based right here. Sogn Contracting has built and remodeled across Coos County since 1995, and we carry CCB# 257491.",
-    serviceLead: "The work we are asked for most in Coquille:",
     localContext: [
       "Coquille grew up as a river and timber town, became the county seat in 1896, and has long been the valley's wood-products and government center. The result is a settled town of older homes on tree-lined streets, mixed with more recent builds, and it is generally the most affordable place to buy in the county. A lot of what we do here is what an established older neighborhood needs: kitchen and bath remodels, additions, roof replacements, and repairs.",
       "Being inland in the valley, Coquille runs warmer and drier than the coast, with less of the fog and salt air that drive material choices in Bandon or Port Orford. That shifts the priorities. Here it is more about practical, lasting work on existing homes than about fighting coastal exposure.",
@@ -219,7 +214,6 @@ export const areas: AreaData[] = [
       "Myrtle Point is a Coquille River valley town about 22 miles from Bandon, and we serve it regularly.",
     intro:
       "Myrtle Point sits on a promontory above the Coquille River valley, about 22 miles from our Bandon shop and known locally as the Hub of Coos County for its spot on Highway 42. It is the most rural town we serve, and the work reflects that. Sogn Contracting has built and remodeled across Coos County since 1995, and we carry CCB# 257491.",
-    serviceLead: "The work we take on most in Myrtle Point:",
     localContext: [
       "This is dairy and timber country. The valley around Myrtle Point has a long farming history, and the landscape is full of older homes, barns, and outbuildings on larger lots. That means we get called for the kind of work rural property needs: shop and garage builds, additions, repairs, and site work, alongside home remodels.",
       "Myrtle Point is also one of the best-preserved small towns in southern Oregon, with a historic downtown and a lot of traditional homes, some kept in fine shape and some mid-renovation. Careful remodeling and renovation of older homes is real, steady work here, and it rewards a contractor who respects how an old house is put together.",
@@ -261,7 +255,6 @@ export const areas: AreaData[] = [
       "Port Orford sits about 27 miles south of Bandon in Curry County, the westernmost incorporated city in the lower 48.",
     intro:
       "Port Orford is about 27 miles south of our Bandon shop and is the westernmost incorporated city in the contiguous United States. It is the one town we serve that sits in Curry County rather than Coos County, so permitting goes through a different jurisdiction, which we are set up to handle. Sogn Contracting has built and remodeled across the Southern Oregon Coast since 1995, and we carry CCB# 257491.",
-    serviceLead: "The work we are called on for most in Port Orford:",
     localContext: [
       "Port Orford is about as exposed as the Oregon coast gets. Its harbor opens straight onto the Pacific with no natural protection, home to the dolly dock that lifts the fishing fleet out of the water by crane, and Cape Blanco, the westernmost point in Oregon, is just up the road. Wind, salt air, and winter storms are a constant, and that drives how we build here. Roofing, siding, decking, flashing, and fasteners all need to be chosen to take a beating, not just to look right on day one.",
       "It is a small town of a little over a thousand people, with a commercial fishing fleet, a strong artist community, and an economy that has shifted over the years toward retirement and services. The median age is past sixty, so a good share of the work is on existing homes: remodels, accessibility and aging-in-place updates, and the kind of exterior maintenance that keeps a coastal house weather-tight.",

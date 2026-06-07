@@ -76,7 +76,6 @@ export default function AreaPage({ params }: { params: { town: string } }): JSX.
             <p>{area.intro}</p>
 
             <h2 className={styles.sectionTitle}>Construction services in {area.name}</h2>
-            <p>{area.serviceLead}</p>
             <ul className={styles.linkGrid}>
               {topServices.map((service) => (
                 <li key={service.slug}>
