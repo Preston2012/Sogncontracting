@@ -31,7 +31,7 @@ export function Hero(): JSX.Element {
         <div className={styles.bandInner}>
           <h1 className={styles.tagline}>Building You A Better Home</h1>
           <p className={styles.subline}>
-            Licensed general contractor serving Bandon and the Southern Oregon Coast. 30 years of residential and commercial construction.
+            Licensed general contractor serving the Southern Oregon Coast and the Valley, from Medford to Eugene. 30 years of residential and commercial construction.
           </p>
         </div>
       </div>

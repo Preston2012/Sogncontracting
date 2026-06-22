@@ -8,7 +8,7 @@ import styles from "../content.module.css";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Get a free estimate from Sogn Contracting, a licensed Bandon general contractor serving the Southern Oregon Coast since 1995. Call or send us your project details.",
+    "Get a free estimate from Sogn Contracting, a licensed Bandon general contractor serving the Southern Oregon Coast and the Valley since 1995. Call or send us your project details.",
   alternates: { canonical: "/contact/" },
 };
 
@@ -59,7 +59,7 @@ export default function ContactPage(): JSX.Element {
                   Get directions
                 </a>
               </p>
-              <p>CCB# {site.credentials.ccb}. Serving Bandon and the Southern Oregon Coast.</p>
+              <p>CCB# {site.credentials.ccb}. Serving the Southern Oregon Coast and the Valley, from Medford to Eugene.</p>
             </div>
             <p>
               Not sure if you are in our area? See the towns we cover on the{" "}

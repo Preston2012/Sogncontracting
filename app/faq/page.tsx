@@ -8,14 +8,14 @@ import styles from "../content.module.css";
 export const metadata: Metadata = {
   title: "FAQ",
   description:
-    "Answers about Sogn Contracting: service area, licensing and CCB# 257491, free estimates, permits, and the kinds of projects we take on in Bandon and the South Coast.",
+    "Answers about Sogn Contracting: service area, licensing and CCB# 257491, free estimates, permits, and the kinds of projects we take on across the Southern Oregon Coast and the Valley.",
   alternates: { canonical: "/faq/" },
 };
 
 const faq: FaqEntry[] = [
   {
     q: "Where does Sogn Contracting work?",
-    a: "We are based in Bandon and serve the Southern Oregon Coast, roughly a 50 mile radius. That includes Coos Bay, North Bend, Coquille, Myrtle Point, and Port Orford. If you are nearby and not sure, just ask.",
+    a: "We are based in Bandon and serve the Southern Oregon Coast, roughly a 50 mile radius. That includes Coos Bay, North Bend, Coquille, Myrtle Point, and Port Orford. We also take on projects inland in the Valley, from Medford to Eugene. If you are nearby and not sure, just ask.",
   },
   {
     q: "Are you licensed, bonded, and insured?",

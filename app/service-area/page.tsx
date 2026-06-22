@@ -61,7 +61,7 @@ export default function ServiceAreaPage(): JSX.Element {
             </ul>
 
             <p>
-              Do not see your town listed? If you are on the Southern Oregon Coast, reach out
+              Do not see your town listed? If you are on the Southern Oregon Coast, or have a project inland in the Valley from Medford to Eugene, reach out
               anyway. We will let you know right away whether your project is in our range.
             </p>
           </div>

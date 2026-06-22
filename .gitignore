@@ -7,3 +7,4 @@ public-backup/
 
 # Winters Code image ladder (generated)
 /public/_opt/
+tsconfig.tsbuildinfo

@@ -31,17 +31,17 @@ export const site = {
     home: {
       title: "Sogn Contracting LLC | General Contractor in Bandon, Oregon",
       description:
-        "Licensed Bandon general contractor since 1995. Residential & commercial construction, remodeling, and custom homes on the Southern Oregon Coast. CCB# 257491.",
+        "Licensed Bandon general contractor since 1995. Residential & commercial construction, remodeling, and custom homes across the Southern Oregon Coast and the Valley, from Medford to Eugene. CCB# 257491.",
     },
     services: {
       title: "Construction Services",
       description:
-        "Full-service residential and commercial construction in Bandon, Oregon. Remodeling, custom homes, additions, roofing, decks, concrete, and commercial builds. 30+ years of experience.",
+        "Full-service residential and commercial construction across the Southern Oregon Coast and the Valley, from Medford to Eugene. Remodeling, custom homes, additions, roofing, decks, concrete, and commercial builds. 30+ years, based in Bandon.",
     },
     gallery: {
       title: "Our Work",
       description:
-        "Before and after project photos from Sogn Contracting. Kitchen remodels, exterior renovations, commercial builds, and more across the Southern Oregon Coast.",
+        "Before and after project photos from Sogn Contracting. Kitchen remodels, exterior renovations, commercial builds, and more across the Southern Oregon Coast and the Valley.",
     },
   },
 
@@ -63,7 +63,7 @@ export const site = {
     "@id": "https://www.sogncontracting.com/#business",
     name: "Sogn Contracting LLC",
     description:
-      "Licensed general contractor serving Bandon and the Southern Oregon Coast since 1995. Residential and commercial construction.",
+      "Licensed general contractor based in Bandon, serving the Southern Oregon Coast and the Valley (Medford to Eugene) since 1995. Residential and commercial construction.",
     url: "https://www.sogncontracting.com",
     logo: "https://www.sogncontracting.com/logo-full.png",
     image: "https://www.sogncontracting.com/og.png",
