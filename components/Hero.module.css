@@ -41,8 +41,7 @@
   inset: 0;
   z-index: 1;
   background-image:
-    linear-gradient(to bottom, var(--bg-hero) 0%, rgba(212, 214, 216, 0) 20%, rgba(212, 214, 216, 0) 80%, var(--bg-hero) 100%),
-    linear-gradient(rgba(255, 255, 255, 0.40), rgba(255, 255, 255, 0.38));
+    linear-gradient(to bottom, var(--bg-hero) 0%, var(--bg-hero) 4%, rgba(255, 255, 255, 0.65) 14%, rgba(255, 255, 255, 0.65) 86%, var(--bg-hero) 96%, var(--bg-hero) 100%);
 }
 
 /* Soft light scrim behind the text so it reads over the photo. */
@@ -57,7 +56,7 @@
   align-items: center;
   gap: var(--space-md);
   text-align: center;
-  background: radial-gradient(ellipse 82% 94% at 50% 50%, rgba(255, 255, 255, 0.80) 0%, rgba(255, 255, 255, 0.50) 48%, rgba(255, 255, 255, 0) 75%);
+  background: none;
 }
 
 .tagline {
