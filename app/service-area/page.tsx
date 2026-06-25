@@ -27,11 +27,11 @@ export default function ServiceAreaPage(): JSX.Element {
         <div className="container">
           <span className={styles.eyebrow}>Areas Served</span>
           <h1 className={styles.title}>
-            General Contractor for Bandon and the Southern Oregon Coast
+            General Contractor Serving Oregon
           </h1>
           <p className={styles.subtitle}>
-            From our shop in Bandon, we build and remodel across Coos County and into Curry
-            County, roughly a 50 mile radius. We have served the South Coast since 1995.
+            From our shop in Bandon, we build and remodel for homeowners and businesses
+            across Oregon. We have been at it since 1995.
           </p>
         </div>
       </section>
@@ -41,8 +41,8 @@ export default function ServiceAreaPage(): JSX.Element {
           <div className={styles.prose}>
             <p>
               {site.name} is a licensed general contractor based in Bandon, Oregon. We work
-              throughout the surrounding towns on remodels, additions, custom homes, roofing,
-              decks, and concrete. Pick your town below to see how we serve it, or{" "}
+              across the state on remodels, additions, custom homes, roofing,
+              decks, and concrete. Pick a town below to see how we serve it, or{" "}
               <a href="/contact/">get a free estimate</a>.
             </p>
 
@@ -61,8 +61,8 @@ export default function ServiceAreaPage(): JSX.Element {
             </ul>
 
             <p>
-              Do not see your town listed? If you are on the Southern Oregon Coast, or have a project inland in the Valley from Medford to Eugene, reach out
-              anyway. We will let you know right away whether your project is in our range.
+              Do not see your town listed? Reach out anyway. We take on projects across Oregon
+              and will let you know right away whether yours is in our range.
             </p>
           </div>
         </div>

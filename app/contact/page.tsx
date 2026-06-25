@@ -59,7 +59,7 @@ export default function ContactPage(): JSX.Element {
                   Get directions
                 </a>
               </p>
-              <p>CCB# {site.credentials.ccb}. Serving the Southern Oregon Coast and the Valley, from Medford to Eugene.</p>
+              <p>CCB# {site.credentials.ccb}. Serving homeowners and businesses across Oregon.</p>
             </div>
             <p>
               Not sure if you are in our area? See the towns we cover on the{" "}

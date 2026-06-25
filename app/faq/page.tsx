@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 const faq: FaqEntry[] = [
   {
     q: "Where does Sogn Contracting work?",
-    a: "We are based in Bandon and serve the Southern Oregon Coast, roughly a 50 mile radius. That includes Coos Bay, North Bend, Coquille, Myrtle Point, and Port Orford. We also take on projects inland in the Valley, from Medford to Eugene. If you are nearby and not sure, just ask.",
+    a: "We are based in Bandon and take on projects across Oregon, from the south coast to the inland valleys. That includes Coos Bay, North Bend, Coquille, Myrtle Point, and Port Orford, and well beyond. If you are not sure we cover your area, just ask.",
   },
   {
     q: "Are you licensed, bonded, and insured?",
@@ -39,7 +39,7 @@ const faq: FaqEntry[] = [
   },
   {
     q: "How long has Sogn Contracting been in business?",
-    a: `Since 1995. That is more than ${site.yearsInBusiness} years building and remodeling on the South Coast, owned by ${site.owner}.`,
+    a: `Since 1995. That is more than ${site.yearsInBusiness} years building and remodeling across Oregon, owned by ${site.owner}.`,
   },
   {
     q: "How do I get started?",
@@ -70,7 +70,7 @@ export default function FaqPage(): JSX.Element {
           <span className={styles.eyebrow}>Answers</span>
           <h1 className={styles.title}>Frequently Asked Questions</h1>
           <p className={styles.subtitle}>
-            The questions we hear most from homeowners and businesses on the South Coast.
+            The questions we hear most from homeowners and businesses across Oregon.
           </p>
         </div>
       </section>

@@ -30,8 +30,8 @@ const faq: FaqEntry[] = [
     a: "Additions vary with square footage, foundation and structural work, and how much finish work is involved. Because the new space ties into your existing home, we price each one after a walkthrough. The estimate is free.",
   },
   {
-    q: "Why does building on the coast cost differently?",
-    a: "Building on the Southern Oregon Coast is not the same as building in a large metro area. Wind, salt air, and damp weather shape material choices, and getting materials and trades out to the coast factors in too. We account for all of it in your estimate.",
+    q: "Does my location affect the cost?",
+    a: "It can. Building on the Oregon coast or in a rural area is not the same as building in a large metro. Wind, salt air, and damp weather shape material choices, and getting materials and trades out to the site factors in too. We account for all of it in your estimate.",
   },
   {
     q: "Do you charge for an estimate?",
