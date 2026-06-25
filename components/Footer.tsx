@@ -116,6 +116,24 @@ export function Footer(): JSX.Element {
             &copy; {year} {site.name}. All rights reserved.
           </span>
         </div>
+        {/* Winters Code credit stamp */}
+        <a
+          href="https://winterscode.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.credit}
+          aria-label="Website built and designed by Winters Code"
+        >
+          <span className={styles.creditLabel}>Website Built &amp; Designed By</span>
+          <img
+            className={styles.creditStamp}
+            src="/wc-credit-stamp-176.webp"
+            alt="Winters Code"
+            width={176}
+            height={176}
+            loading="lazy"
+          />
+        </a>
       </div>
     </footer>
   );
