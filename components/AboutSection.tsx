@@ -15,13 +15,13 @@ export function AboutSection(): JSX.Element {
         <div className={styles.text}>
           <h2 className={styles.title}>About Sogn Contracting</h2>
           <p>
-            Sogn Contracting has been building across the Southern Oregon Coast and the Valley since 1995. What started as one carpenter with a truck has grown into a full-service residential and commercial contracting company. Three decades later, the mission hasn&apos;t changed.
+            Sogn Contracting has been building across Oregon since 1995. What started as one carpenter with a truck has grown into a full-service residential and commercial contracting company. Three decades later, the mission hasn&apos;t changed.
           </p>
           <p>
             We&apos;re licensed, bonded, and insured. We handle everything from custom home builds to kitchen remodels to commercial renovations. Every project gets the same level of care: honest communication, quality materials, and work we stand behind.
           </p>
           <p>
-            Based in Bandon, Oregon. Proudly serving the Southern Oregon Coast and the Valley, from Medford to Eugene.
+            Based in Bandon, Oregon. Proudly serving homeowners and businesses across the state.
           </p>
           <p className={styles.values}>
             Faith, integrity, and craftsmanship guide every project we take on.

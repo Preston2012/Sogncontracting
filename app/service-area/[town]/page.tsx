@@ -14,8 +14,9 @@ export function generateStaticParams(): { town: string }[] {
   return areas.map((a) => ({ town: a.slug }));
 }
 
-export function generateMetadata({ params }: { params: { town: string } }): Metadata {
-  const area = getAreaBySlug(params.town);
+export async function generateMetadata({ params }: { params: Promise<{ town: string }> }): Promise<Metadata> {
+  const { town } = await params;
+  const area = getAreaBySlug(town);
   if (!area) return {};
   return {
     title: `General Contractor in ${area.name}, OR`,
@@ -24,8 +25,9 @@ export function generateMetadata({ params }: { params: { town: string } }): Meta
   };
 }
 
-export default function AreaPage({ params }: { params: { town: string } }): JSX.Element {
-  const area = getAreaBySlug(params.town);
+export default async function AreaPage({ params }: { params: Promise<{ town: string }> }): Promise<JSX.Element> {
+  const { town } = await params;
+  const area = getAreaBySlug(town);
   if (!area) notFound();
 
   const topServices = area.topServices
