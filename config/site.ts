@@ -7,8 +7,8 @@ export const site = {
   yearsInBusiness: "30+",
 
   contact: {
-    phone: "(602) 904-0741",
-    phoneTel: "+16029040741",
+    phone: "(541) 580-5445",
+    phoneTel: "+15415805445",
     email: "sogncontracting@gmail.com",
     address: {
       street: "55260 Rosa Rd",
@@ -67,7 +67,7 @@ export const site = {
     url: "https://www.sogncontracting.com",
     logo: "https://www.sogncontracting.com/logo-full.png",
     image: "https://www.sogncontracting.com/og.png",
-    telephone: "+16029040741",
+    telephone: "+15415805445",
     email: "sogncontracting@gmail.com",
     address: {
       "@type": "PostalAddress",
