@@ -93,10 +93,9 @@
   grid-column: 1 / -1;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   gap: var(--space-sm);
   padding-top: var(--space-md);
-  padding-right: 56px;
   border-top: 2px solid var(--border-dark);
   margin-top: var(--space-xs);
 }
@@ -105,6 +104,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   gap: var(--space-md) var(--space-lg);
 }
 
@@ -119,6 +119,7 @@
 .copyright {
   font-size: var(--text-caption);
   color: var(--text-on-dark-sub);
+  text-align: center;
 }
 
 /* Link columns (Services, Areas Served, Company) */
@@ -223,12 +224,12 @@
   .credit {
     flex-direction: row;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
     gap: var(--space-sm);
     margin-top: 0;
   }
   .creditLabel {
-    text-align: right;
+    text-align: center;
   }
   .creditStamp {
     width: 54px;
