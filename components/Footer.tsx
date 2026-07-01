@@ -124,7 +124,7 @@ export function Footer(): JSX.Element {
           className={styles.credit}
           aria-label="Website built and designed by Winters Code"
         >
-          <span className={styles.creditLabel}>Website Built &amp; Designed By</span>
+          <span className={styles.creditLabel}>Designed &amp; Built By</span>
           <img
             className={styles.creditStamp}
             src="/wc-credit-stamp-176.webp"
