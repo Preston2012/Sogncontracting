@@ -2,6 +2,7 @@
   background-color: var(--bg-footer);
   color: var(--text-on-dark);
   padding: var(--space-lg) 0 var(--space-md);
+  text-align: center;
 }
 
 .inner {
@@ -16,6 +17,7 @@
   grid-column: 1 / -1;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: var(--space-sm);
 }
 
@@ -27,7 +29,7 @@
 }
 
 .scripture {
-  font-size: var(--text-small);
+  font-size: 1.25rem;
   line-height: var(--leading-relaxed);
   color: var(--text-on-dark-sub);
   max-width: 400px;
@@ -35,6 +37,7 @@
 }
 
 .verse {
+  font-size: 1.375rem;
   color: var(--sogn-green-on-dark);
   font-weight: var(--weight-semibold);
   font-style: normal;
@@ -44,6 +47,7 @@
 .contact {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: var(--space-sm);
 }
 
@@ -126,6 +130,7 @@
 .col {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: var(--space-sm);
 }
 
@@ -141,6 +146,7 @@
 .colList {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: var(--space-xs);
   list-style: none;
 }
